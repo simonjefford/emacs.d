@@ -14,6 +14,8 @@
 ;; TODO
 ;; custom stuff into a separate file
 ;; backup files into a sane place
+;; recentf in C-x b
+;; C-x b setup
 ;; magit
 ;; macos setup
 ;; projectile
