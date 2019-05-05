@@ -12,12 +12,12 @@
   (package-install 'use-package))
 
 ;; TODO
-;; C-x m
+;; C-x m DONE with IVY
 ;; custom stuff into a separate file
 ;; backup files into a sane place
-;; recentf in C-x b
-;; C-x b setup
-;; magit
+;; recentf in C-x b DONE (ivy)
+;; C-x b setup DONE (ivy)
+;; magit DONE
 ;; macos setup
 ;; projectile
 ;; themes
@@ -25,7 +25,7 @@
 ;; git stuff
 ;; generic programming
 ;; Ctrl-W
-;; helm(?)
+;; helm(?) (NOT FOR NOW - trying ivy)
 ;; kill ring stuff
 ;; go
 ;; rust
@@ -73,6 +73,17 @@
   :ensure t)
 
 (use-package crux
+  :ensure t)
+
+(use-package counsel
+  :ensure t)
+
+(use-package ivy
+  :init
+  (setq ivy-use-virtual-buffers t)
+  :bind (("C-x C-m" . counsel-M-x)
+	 ("C-x C-f" . counsel-find-file)
+	 ("C-x b" . ivy-switch-buffer))
   :ensure t)
 
 (custom-set-variables
