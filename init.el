@@ -19,8 +19,11 @@
 ;; C-x b setup DONE (ivy)
 ;; magit DONE
 ;; macos setup DONE
+;; resizing
+;; recompile-init
+;; command history DONE
 ;; projectile
-;; themes
+;; themes DONE
 ;; git change view in gutter thingy
 ;; git stuff
 ;; generic programming
