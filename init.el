@@ -17,6 +17,8 @@
 ;; magit
 ;; macos setup
 ;; projectile
+;; themes
+;; git change view in gutter thingy
 ;; git stuff
 ;; generic programming
 ;; Ctrl-W
