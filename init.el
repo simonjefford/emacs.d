@@ -12,6 +12,7 @@
   (package-install 'use-package))
 
 ;; TODO
+;; C-x m
 ;; custom stuff into a separate file
 ;; backup files into a sane place
 ;; recentf in C-x b
