@@ -121,6 +121,17 @@ Windows external keyboard from time to time."
   :config
   (counsel-projectile-mode +1))
 
+(use-package discover-my-major
+  :ensure t)
+
+(use-package editorconfig
+  :ensure t
+  :config
+  (editorconfig-mode 1))
+
+(use-package git-timemachine
+  :ensure t)
+
 (when (fboundp 'set-fontset-font)
   (set-fontset-font t 'unicode "Apple Color Emoji" nil 'prepend))
 
