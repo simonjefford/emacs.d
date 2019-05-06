@@ -69,7 +69,14 @@
   :ensure t)
 
 (use-package projectile
-  :ensure t)
+  :ensure t
+  :bind (("M-t" . 'projectile-find-file))
+  :init
+  (setq projectile-switch-project-action 'projectile-vc)
+  :bind-keymap
+  ("s-p" . projectile-command-map)
+  :config
+  (projectile-mode +1))
 
 (use-package crux
   :ensure t)
@@ -108,6 +115,11 @@ Windows external keyboard from time to time."
     (message "Command is now bound to SUPER and Option is bound to META.")))
 
 (swap-meta-and-super)
+
+(use-package counsel-projectile
+  :ensure t
+  :config
+  (counsel-projectile-mode +1))
 
 (when (fboundp 'set-fontset-font)
   (set-fontset-font t 'unicode "Apple Color Emoji" nil 'prepend))
