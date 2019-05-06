@@ -22,10 +22,10 @@
 ;; resizing
 ;; recompile-init
 ;; command history DONE
-;; projectile
+;; projectile DONE
 ;; themes DONE
 ;; git change view in gutter thingy
-;; git stuff
+;; git stuff ??
 ;; generic programming
 ;; Ctrl-W
 ;; helm(?) (NOT FOR NOW - trying ivy)
