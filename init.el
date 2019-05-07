@@ -194,5 +194,7 @@ Windows external keyboard from time to time."
 (add-to-list 'ibuffer-never-show-predicates "^\\*")
 
 (define-key isearch-mode-map (kbd "C-o") 'isearch-occur)
+(bind-key "C-w" 'backward-kill-word)
+
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file)
