@@ -29,7 +29,7 @@
 ;; generic programming
 ;; Ctrl-W
 ;; helm(?) (NOT FOR NOW - trying ivy)
-;; kill ring stuff
+;; kill ring stuff DONE
 ;; go
 ;; rust
 ;; markdown
@@ -130,6 +130,16 @@ Windows external keyboard from time to time."
   (editorconfig-mode 1))
 
 (use-package git-timemachine
+  :ensure t)
+
+(use-package rust-mode
+  :ensure t)
+
+(use-package browse-kill-ring
+  :bind (("s-y" . browse-kill-ring))
+  :ensure t)
+
+(use-package go-mode
   :ensure t)
 
 (when (fboundp 'set-fontset-font)
