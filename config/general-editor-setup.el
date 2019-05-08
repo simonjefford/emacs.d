@@ -121,7 +121,7 @@ The body of the advice is in BODY."
 
 (bind-key "C-s-<" (lambda()
 		    (interactive)
-		    (shrink,-window-horizontally 1)))
+		    (shrink-window-horizontally 1)))
 
 (bind-key "C-w" 'backward-kill-word)
 
