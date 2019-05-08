@@ -126,3 +126,5 @@ The body of the advice is in BODY."
 (bind-key "C-w" 'backward-kill-word)
 
 (bind-key "M-`" 'other-frame)
+
+(bind-key "C-c r" 'crux-rename-file-and-buffer)
