@@ -28,4 +28,7 @@
 
 (load-theme 'deeper-blue)
 
+(when (fboundp 'set-fontset-font)
+  (set-fontset-font t 'unicode "Apple Color Emoji" nil 'prepend))
+
 (provide 'ui)

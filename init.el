@@ -17,9 +17,6 @@
 (use-package discover-my-major
   :ensure t)
 
-(when (fboundp 'set-fontset-font)
-  (set-fontset-font t 'unicode "Apple Color Emoji" nil 'prepend))
-
 (server-start)
 
 (use-package xkcd
