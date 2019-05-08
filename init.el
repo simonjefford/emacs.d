@@ -218,5 +218,14 @@ Windows external keyboard from time to time."
 
 (bind-key "M-`" 'other-frame)
 
+(use-package xkcd
+  :ensure t)
+
+(use-package markdown-mode
+  :ensure t
+  :commands (markdown-mode gfm-mode)
+  :mode (("\\.md" . gfm-mode)
+	 ("\\.markdown" . gfm-mode)))
+
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file)
