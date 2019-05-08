@@ -24,16 +24,18 @@
 ;; command history DONE
 ;; projectile DONE
 ;; themes DONE
-;; git change view in gutter thingy
-;; git stuff ??
+;; git change view in gutter thingy DONE
 ;; generic programming
-;; Ctrl-W
+;; Ctrl-W DONE
 ;; helm(?) (NOT FOR NOW - trying ivy)
 ;; kill ring stuff DONE
 ;; go
 ;; rust
-;; markdown
-;; refine magit setup
+;; markdown DONE
+;; refine magit setup (full screen magit)
+;; command history
+;; save on lost focus
+;; magit pinning
 
 (when (fboundp 'tool-bar-mode)
   (tool-bar-mode -1))
