@@ -12,11 +12,9 @@
 (require 'ibuffer-setup)
 (require 'general-editor-setup)
 (require 'go-setup)
+(require 'rust-setup)
 
 (use-package discover-my-major
-  :ensure t)
-
-(use-package rust-mode
   :ensure t)
 
 (when (fboundp 'set-fontset-font)
