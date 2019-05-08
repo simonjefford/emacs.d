@@ -1,49 +1,12 @@
-;; MELPA setup
-(require 'package)
+(defvar emacsd (file-name-directory load-file-name))
+(defvar main-config-dir (expand-file-name "config" emacsd))
 
-(add-to-list 'package-archives (cons "melpa" "https://melpa.org/packages/"))
+(add-to-list 'load-path main-config-dir)
 
-(package-initialize)
-
-(unless package-archive-contents
-  (package-refresh-contents))
-
-(unless (package-installed-p 'use-package)
-  (package-install 'use-package))
-
-(when (fboundp 'tool-bar-mode)
-  (tool-bar-mode -1))
-
-(when (fboundp 'scroll-bar-mode)
-  (scroll-bar-mode -1))
-
-;; the blinking cursor is nothing, but an annoyance
-(blink-cursor-mode -1)
-
-;; disable the annoying bell ring
-(setq ring-bell-function 'ignore)
-
-;; disable startup screen
-(setq inhibit-startup-screen t)
-
-;; nice scrolling
-(setq scroll-margin 0
-      scroll-conservatively 100000
-      scroll-preserve-screen-position 1)
-
-;; mode line settings
-(line-number-mode t)
-(column-number-mode t)
-(size-indication-mode t)
-
-;; enable y/n answers
-(fset 'yes-or-no-p 'y-or-n-p)
-
-(load-theme 'deeper-blue)
-
-(use-package magit
-  :ensure t
-  :bind ("C-x g" . magit-status))
+(require 'package-setup)
+(require 'ui)
+(require 'macos)
+(require 'git)
 
 (use-package projectile
   :ensure t
@@ -68,30 +31,8 @@
 	 ("C-x C-f" . counsel-find-file)
 	 ("C-x b" . ivy-switch-buffer))
   :ensure t)
-
-(use-package exec-path-from-shell
-  :ensure t
-  :config
-  (exec-path-from-shell-initialize))
-
 (use-package smex
   :ensure t)
-
-(defun swap-meta-and-super ()
-  "Swap the mapping of Meta and Super.
-Very useful for people using their Mac with a
-Windows external keyboard from time to time."
-  (interactive)
-  (if (eq mac-command-modifier 'super)
-      (progn
-        (setq mac-command-modifier 'meta)
-        (setq mac-option-modifier 'super)
-        (message "Command is now bound to META and Option is bound to SUPER."))
-    (setq mac-command-modifier 'super)
-    (setq mac-option-modifier 'meta)
-    (message "Command is now bound to SUPER and Option is bound to META.")))
-
-(swap-meta-and-super)
 
 (use-package counsel-projectile
   :ensure t
@@ -105,9 +46,6 @@ Windows external keyboard from time to time."
   :ensure t
   :config
   (editorconfig-mode 1))
-
-(use-package git-timemachine
-  :ensure t)
 
 (use-package rust-mode
   :ensure t)
@@ -227,12 +165,8 @@ Windows external keyboard from time to time."
 (use-package ivy-hydra
   :ensure t)
 
-(use-package diff-hl
-  :ensure t
-  :config
-  (global-diff-hl-mode +1))
-
 (setq custom-file "~/.emacs.d/custom.el")
 (when (file-exists-p custom-file)
   (load custom-file))
 
+(winner-mode +1)
