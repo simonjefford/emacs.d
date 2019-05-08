@@ -10,17 +10,10 @@
 (require 'ivy-setup)
 (require 'projectile-setup)
 (require 'ibuffer-setup)
-
-(use-package crux
-  :ensure t)
+(require 'general-editor-setup)
 
 (use-package discover-my-major
   :ensure t)
-
-(use-package editorconfig
-  :ensure t
-  :config
-  (editorconfig-mode 1))
 
 (use-package rust-mode
   :ensure t)
@@ -46,7 +39,6 @@
 
 (server-start)
 
-(define-key isearch-mode-map (kbd "C-o") 'isearch-occur)
 (bind-key "C-w" 'backward-kill-word)
 
 (bind-key "M-`" 'other-frame)
@@ -60,19 +52,6 @@
   :mode (("\\.md" . gfm-mode)
 	 ("\\.markdown" . gfm-mode)))
 
-(use-package smartparens
-  :ensure t
-  :init
-  (progn
-    (setq sp-base-key-bindings 'paredit)
-    (setq sp-autoskil-closing-pair 'always)
-    (setq sp-hybrid-kill-entire-symbol nil))
-  :config
-  (progn
-    (require 'smartparens-config)
-    (sp-use-paredit-bindings)
-    (show-smartparens-global-mode +1)))
-
 (defun emacs-lisp-setup()
   (progn
     (smartparens-strict-mode +1)
@@ -85,4 +64,4 @@
 (when (file-exists-p custom-file)
   (load custom-file))
 
-(winner-mode +1)
+
