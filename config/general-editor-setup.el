@@ -9,6 +9,9 @@
       `((".*" . ,temporary-file-directory)))
 (setq undo-tree-auto-save-history t)
 
+;; revert buffers automatically when underlying files are changed externally
+(global-auto-revert-mode t)
+
 (use-package crux
   :ensure t)
 
