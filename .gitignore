@@ -9,3 +9,4 @@
 /transient
 /custom.el
 *.elc
+/savefile
