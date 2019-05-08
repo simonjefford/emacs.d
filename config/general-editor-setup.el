@@ -81,3 +81,26 @@
 (require 'windmove)
 (windmove-default-keybindings)
 (provide 'general-editor-setup)
+
+(defun save-if-appropriate()
+  (when (and buffer-file-name
+	     (buffer-modified-p (current-buffer))
+	     (file-writable-p buffer-file-name))
+    (save-buffer)))
+
+(defmacro advise-commands (advice-name commands class &rest body)
+  "Apply advice named ADVICE-NAME to multiple COMMANDS.
+
+The body of the advice is in BODY."
+  `(progn
+     ,@(mapcar (lambda (command)
+                 `(defadvice ,command (,class ,(intern (concat (symbol-name command) "-" advice-name)) activate)
+                    ,@body))
+               commands)))
+
+(advise-commands "auto-save"
+                 (switch-to-buffer other-window windmove-up windmove-down windmove-left windmove-right)
+                 before
+                 (save-if-appropriate))
+
+(add-hook 'focus-out-hook 'save-if-appropriate)
