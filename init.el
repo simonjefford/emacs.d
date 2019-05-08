@@ -248,5 +248,8 @@ Windows external keyboard from time to time."
 
 (add-hook 'emacs-lisp-mode-hook 'emacs-lisp-setup)
 
+(use-package ivy-hydra
+  :ensure t)
+
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file)
