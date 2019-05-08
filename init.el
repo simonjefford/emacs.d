@@ -251,5 +251,10 @@ Windows external keyboard from time to time."
 (use-package ivy-hydra
   :ensure t)
 
+(use-package diff-hl
+  :ensure t
+  :config
+  (global-diff-hl-mode +1))
+
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file)
