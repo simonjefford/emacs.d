@@ -257,4 +257,6 @@ Windows external keyboard from time to time."
   (global-diff-hl-mode +1))
 
 (setq custom-file "~/.emacs.d/custom.el")
-(load custom-file)
+(when (file-exists-p custom-file)
+  (load custom-file))
+
