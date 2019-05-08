@@ -24,3 +24,5 @@
 ** TODO save on lost focus
 ** TODO magit pinning
 ** TODO org mode
+** TODO emacs list tab completion
+** TODO mode line stuff
