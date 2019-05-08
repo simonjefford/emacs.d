@@ -11,23 +11,12 @@
 (require 'projectile-setup)
 (require 'ibuffer-setup)
 (require 'general-editor-setup)
+(require 'go-setup)
 
 (use-package discover-my-major
   :ensure t)
 
 (use-package rust-mode
-  :ensure t)
-
-(use-package go-mode
-  :config
-  (progn
-    (setq gofmt-command "goimports")
-    (add-hook 'before-save-hook #'gofmt-before-save))
-  :ensure t)
-
-(use-package go-guru
-  :bind (:map go-mode-map
-	      ("M-." . go-guru-definition))
   :ensure t)
 
 (when (fboundp 'set-fontset-font)
