@@ -1,7 +1,7 @@
 * Emacs configuration tasks
 ** DONE C-x m with IVY
-** TODO custom stuff into a separate file
-** TODO backup files into a sane place
+** DONE custom stuff into a separate file
+** DONE backup files into a sane places
 ** DONE recentf in C-x b (ivy)
 ** DONE C-x b setup (ivy)
 ** DONE magit
@@ -21,7 +21,7 @@
 ** DONE markdown
 ** TODO refine magit setup (full screen magit)
 ** TODO isearch command history
-** TODO save on lost focus
+** DONE save on lost focus
 ** TODO magit pinning
 ** TODO org mode
 ** TODO emacs list tab completion
