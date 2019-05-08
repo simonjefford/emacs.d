@@ -6,7 +6,7 @@
 ** DONE C-x b setup (ivy)
 ** DONE magit
 ** DONE macos setup
-** TODO resizing
+** DONE resizing
 ** TODO recompile-init
 ** DONE command history
 ** DONE projectile
