@@ -22,10 +22,6 @@
 
 (server-start)
 
-(bind-key "C-w" 'backward-kill-word)
-
-(bind-key "M-`" 'other-frame)
-
 (use-package xkcd
   :ensure t)
 
