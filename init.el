@@ -141,6 +141,15 @@ Windows external keyboard from time to time."
   :ensure t)
 
 (use-package go-mode
+  :config
+  (progn
+    (setq gofmt-command "goimports")
+    (add-hook 'before-save-hook #'gofmt-before-save))
+  :ensure t)
+
+(use-package go-guru
+  :bind (:map go-mode-map
+	      ("M-." . go-guru-definition))
   :ensure t)
 
 (when (fboundp 'set-fontset-font)
@@ -206,6 +215,8 @@ Windows external keyboard from time to time."
 
 (define-key isearch-mode-map (kbd "C-o") 'isearch-occur)
 (bind-key "C-w" 'backward-kill-word)
+
+(bind-key "M-`" 'other-frame)
 
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file)
