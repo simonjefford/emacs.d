@@ -128,3 +128,5 @@ The body of the advice is in BODY."
 (bind-key "M-`" 'other-frame)
 
 (bind-key "C-c r" 'crux-rename-file-and-buffer)
+
+(bind-key "C-a" 'crux-move-beginning-of-line)
