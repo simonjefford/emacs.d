@@ -21,6 +21,10 @@
     (sp-use-paredit-bindings)
     (show-smartparens-global-mode +1)))
 
+(use-package browse-kill-ring
+  :bind (("s-y" . browse-kill-ring))
+  :ensure t)
+
 (winner-mode +1)
 
 (provide 'general-editor-setup)

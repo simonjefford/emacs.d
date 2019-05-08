@@ -18,10 +18,6 @@
 (use-package rust-mode
   :ensure t)
 
-(use-package browse-kill-ring
-  :bind (("s-y" . browse-kill-ring))
-  :ensure t)
-
 (use-package go-mode
   :config
   (progn
