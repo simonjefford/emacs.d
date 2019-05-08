@@ -77,4 +77,7 @@
 
 (add-to-list 'recentf-exclude 'sjj-recentf-exclude-p)
 
+;; use shift + arrow keys to switch between visible buffers
+(require 'windmove)
+(windmove-default-keybindings)
 (provide 'general-editor-setup)
