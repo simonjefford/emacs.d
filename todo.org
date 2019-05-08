@@ -1,0 +1,26 @@
+* TODO
+** DONE C-x m with IVY
+** custom stuff into a separate file
+** backup files into a sane place
+** DONE recentf in C-x b (ivy)
+** DONE C-x b setup (ivy)
+** DONE magit
+** DONE macos setup
+** resizing
+** recompile-init
+** DONE command history
+** DONE projectile
+** DONE themes
+** DONE git change view in gutter thingy
+** generic programming
+** DONE Ctrl-W
+** helm(?) (NOT FOR NOW - trying ivy)
+** DONE kill ring stuff 
+** go
+** rust
+** DONE markdown
+** refine magit setup (full screen magit)
+** command history
+** save on lost focus
+** magit pinning
+** org mode

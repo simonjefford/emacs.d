@@ -11,32 +11,6 @@
 (unless (package-installed-p 'use-package)
   (package-install 'use-package))
 
-;; TODO
-;; C-x m DONE with IVY
-;; custom stuff into a separate file
-;; backup files into a sane place
-;; recentf in C-x b DONE (ivy)
-;; C-x b setup DONE (ivy)
-;; magit DONE
-;; macos setup DONE
-;; resizing
-;; recompile-init
-;; command history DONE
-;; projectile DONE
-;; themes DONE
-;; git change view in gutter thingy DONE
-;; generic programming
-;; Ctrl-W DONE
-;; helm(?) (NOT FOR NOW - trying ivy)
-;; kill ring stuff DONE
-;; go
-;; rust
-;; markdown DONE
-;; refine magit setup (full screen magit)
-;; command history
-;; save on lost focus
-;; magit pinning
-
 (when (fboundp 'tool-bar-mode)
   (tool-bar-mode -1))
 
