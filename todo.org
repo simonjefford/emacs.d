@@ -1,4 +1,4 @@
-* TODO
+* Emacs configuration tasks
 ** DONE C-x m with IVY
 ** TODO custom stuff into a separate file
 ** TODO backup files into a sane place
@@ -26,3 +26,4 @@
 ** TODO org mode
 ** TODO emacs list tab completion
 ** TODO mode line stuff
+** TODO ivy completion typing order = not good at the moment
