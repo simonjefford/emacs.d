@@ -227,5 +227,26 @@ Windows external keyboard from time to time."
   :mode (("\\.md" . gfm-mode)
 	 ("\\.markdown" . gfm-mode)))
 
+(use-package smartparens
+  :ensure t
+  :init
+  (progn
+    (setq sp-base-key-bindings 'paredit)
+    (setq sp-autoskil-closing-pair 'always)
+    (setq sp-hybrid-kill-entire-symbol nil))
+  :config
+  (progn
+    (require 'smartparens-config)
+    (sp-use-paredit-bindings)
+    (show-smartparens-global-mode +1)))
+
+(defun emacs-lisp-setup()
+  (progn
+    (smartparens-strict-mode +1)
+    (eldoc-mode +1)
+    (whitespace-mode -1)))
+
+(add-hook 'emacs-lisp-mode-hook 'emacs-lisp-setup)
+
 (setq custom-file "~/.emacs.d/custom.el")
 (load custom-file)
