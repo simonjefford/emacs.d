@@ -41,4 +41,40 @@
 
 (winner-mode +1)
 
+(defvar sjj-savefile-dir (expand-file-name "savefile" emacsd)
+  "This folder stores all the automatically generated save/history-files.")
+
+(unless (file-exists-p sjj-savefile-dir)
+  (make-directory sjj-savefile-dir))
+
+(setq save-place-file (expand-file-name "saveplace" sjj-savefile-dir))
+(save-place-mode 1)
+
+(require 'savehist)
+(setq savehist-additional-variables
+      ;; search entries
+      '(search-ring regexp-search-ring)
+      ;; save every minute
+      savehist-autosave-interval 60
+      ;; keep the home clean
+      savehist-file (expand-file-name "savehist" sjj-savefile-dir))
+(savehist-mode +1)
+
+(require 'recentf)
+(setq recentf-save-file (expand-file-name "recentf" sjj-savefile-dir)
+      recentf-max-saved-items 500
+      recentf-max-menu-items 15
+      ;; disable recentf-cleanup on Emacs start, because it can cause
+      ;; problems with remote files
+      recentf-auto-cleanup 'never)
+
+(defun sjj-recentf-exclude-p (file)
+  "A predicate to decide whether to exclude FILE from recentf."
+  (let ((file-dir (file-truename (file-name-directory file))))
+    (cl-some (lambda (dir)
+               (string-prefix-p dir file-dir))
+             (mapcar 'file-truename (list sjj-savefile-dir package-user-dir)))))
+
+(add-to-list 'recentf-exclude 'sjj-recentf-exclude-p)
+
 (provide 'general-editor-setup)
