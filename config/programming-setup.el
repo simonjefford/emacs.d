@@ -17,4 +17,9 @@
   :config
   (global-flycheck-mode +1))
 
+;; "incidental" language setup
+(use-package groovy-mode
+  :init (add-to-list 'auto-mode-alist '("Jenkinsfile\\'" . groovy-mode))
+  :ensure t)
+
 (provide 'programming-setup)
