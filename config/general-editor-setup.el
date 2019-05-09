@@ -130,3 +130,6 @@ The body of the advice is in BODY."
 (bind-key "C-c r" 'crux-rename-file-and-buffer)
 
 (bind-key "C-a" 'crux-move-beginning-of-line)
+
+(bind-key "C-s" 'isearch-forward-regexp)
+(bind-key "C-r" 'isearch-backward-regexp)
