@@ -5,7 +5,8 @@
 
 (require 'package-setup)
 (require 'ui)
-(require 'macos)
+(when (eq system-type 'darwin)
+  (require 'macos))
 (require 'git)
 (require 'ivy-setup)
 (require 'projectile-setup)
