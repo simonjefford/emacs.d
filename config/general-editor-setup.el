@@ -72,10 +72,11 @@
 
 (defun sjj-recentf-exclude-p (file)
   "A predicate to decide whether to exclude FILE from recentf."
-  (let ((file-dir (file-truename (file-name-directory file))))
+  (let ((file-dir (file-truename (file-name-directory file)))
+	(xkcd-dir (expand-file-name "xkcd" emacsd)))
     (cl-some (lambda (dir)
                (string-prefix-p dir file-dir))
-             (mapcar 'file-truename (list sjj-savefile-dir package-user-dir)))))
+             (mapcar 'file-truename (list sjj-savefile-dir package-user-dir xkcd-dir)))))
 
 (add-to-list 'recentf-exclude 'sjj-recentf-exclude-p)
 
