@@ -25,7 +25,12 @@
 ** TODO org mode
 ** TODO emacs list tab completion
 ** TODO mode line stuff
+
+- diminish / delight
+- theme
+
 ** TODO ivy completion typing order = not good at the moment
-** TODO flycheck
+** DONE flycheck
 ** TODO configure company mode nicely
 ** DONE terraform
+** TODO ruby setup - checkers etc...
