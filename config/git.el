@@ -1,6 +1,9 @@
+(unbind-key "s-m")
+
 (use-package magit
   :ensure t
-  :bind ("C-x g" . magit-status))
+  :bind (("C-x g" . magit-status)
+	 ("s-m b" . magit-blame-addition)))
 
 (use-package git-timemachine
   :ensure t)
