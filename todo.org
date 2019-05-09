@@ -28,4 +28,4 @@
 ** TODO mode line stuff
 ** TODO ivy completion typing order = not good at the moment
 ** TODO flycheck
-** TODO terraform
+** DONE terraform

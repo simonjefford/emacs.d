@@ -15,6 +15,7 @@
 (require 'emacs-lisp-setup)
 (require 'go-setup)
 (require 'rust-setup)
+(require 'terraform-setup)
 
 (use-package discover-my-major
   :ensure t)
