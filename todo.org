@@ -18,7 +18,7 @@
 ** TODO go
 ** TODO rust
 ** DONE markdown
-** TODO refine magit setup (full screen magit)
+** DONE refine magit setup (full screen magit)
 ** TODO isearch command history
 ** DONE save on lost focus
 ** TODO magit pinning
