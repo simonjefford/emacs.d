@@ -11,6 +11,7 @@
 (require 'projectile-setup)
 (require 'ibuffer-setup)
 (require 'general-editor-setup)
+(require 'programming-setup)
 (require 'go-setup)
 (require 'rust-setup)
 
