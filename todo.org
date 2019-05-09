@@ -7,14 +7,13 @@
 ** DONE magit
 ** DONE macos setup
 ** DONE resizing
-** TODO recompile-init
+** DONE recompile-init
 ** DONE command history
 ** DONE projectile
 ** DONE themes
 ** DONE git change view in gutter thingy
-** TODO generic programming
+** TODO general programming
 ** DONE Ctrl-W
-** TODO helm(?) (NOT FOR NOW - trying ivy)
 ** DONE kill ring stuff
 ** TODO go
 ** TODO rust
@@ -28,4 +27,5 @@
 ** TODO mode line stuff
 ** TODO ivy completion typing order = not good at the moment
 ** TODO flycheck
+** TODO configure company mode nicely
 ** DONE terraform
