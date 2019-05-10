@@ -10,4 +10,8 @@
 	      ("M-." . go-guru-definition))
   :ensure t)
 
+
+(use-package go-projectile
+  :ensure t)
+
 (provide 'go-setup)
