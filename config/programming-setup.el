@@ -22,4 +22,13 @@
   :init (add-to-list 'auto-mode-alist '("Jenkinsfile\\'" . groovy-mode))
   :ensure t)
 
+(use-package yaml-mode
+  :ensure t)
+
+(use-package protobuf-mode
+  :ensure t)
+
+(use-package dockerfile-mode
+  :ensure t)
+
 (provide 'programming-setup)
