@@ -26,6 +26,9 @@
 ;; enable y/n answers
 (fset 'yes-or-no-p 'y-or-n-p)
 
+(use-package solarized-theme
+  :ensure t)
+
 (load-theme 'deeper-blue)
 
 (when (fboundp 'set-fontset-font)
