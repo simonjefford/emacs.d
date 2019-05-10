@@ -41,6 +41,10 @@
   (browse-kill-ring-default-keybindings)
   :ensure t)
 
+(use-package which-key
+  :ensure t
+  :config (which-key-mode +1))
+
 (winner-mode +1)
 
 (defvar sjj-savefile-dir (expand-file-name "savefile" emacsd)
