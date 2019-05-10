@@ -34,3 +34,5 @@
 ** TODO configure company mode nicely
 ** DONE terraform
 ** TODO ruby setup - checkers etc...
+** TODO gist.el
+** TODO stdin buffers => ensure don't go into recentf
