@@ -32,10 +32,10 @@
   :mode (("\\.md" . gfm-mode)
 	 ("\\.markdown" . gfm-mode)))
 
-(setq custom-file "~/.emacs.d/custom.el")
-(when (file-exists-p custom-file)
-  (load custom-file))
-
 (defun recompile-init ()
   (interactive)
   (byte-recompile-directory emacsd 0))
+
+(setq custom-file "~/.emacs.d/custom.el")
+(when (file-exists-p custom-file)
+  (load custom-file))
