@@ -31,4 +31,6 @@
 (use-package dockerfile-mode
   :ensure t)
 
+(setq compilation-ask-about-save nil)
+
 (provide 'programming-setup)
