@@ -87,7 +87,6 @@
 ;; use shift + arrow keys to switch between visible buffers
 (require 'windmove)
 (windmove-default-keybindings)
-(provide 'general-editor-setup)
 
 (defun save-if-appropriate()
   (when (and buffer-file-name
@@ -138,3 +137,5 @@ The body of the advice is in BODY."
 
 (bind-key "C-s" 'isearch-forward-regexp)
 (bind-key "C-r" 'isearch-backward-regexp)
+
+(provide 'general-editor-setup)
