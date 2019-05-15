@@ -29,7 +29,7 @@
 (use-package solarized-theme
   :ensure t)
 
-(load-theme 'deeper-blue)
+(load-theme 'solarized-dark)
 
 (when (fboundp 'set-fontset-font)
   (set-fontset-font t 'unicode "Apple Color Emoji" nil 'prepend))
