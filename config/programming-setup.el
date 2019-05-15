@@ -33,4 +33,13 @@
 
 (setq compilation-ask-about-save nil)
 
+(sp-pair "{" nil :post-handlers
+         '(((lambda (&rest _ignored)
+              (crux-smart-open-line-above)) "RET")))
+
+(defun sjj-prog-mode-defaults()
+  (set (make-local-variable 'comment-auto-fill-only-comments) t)
+  (smartparens-mode +1))
+
+(add-hook 'prog-mode-hook 'sjj-prog-mode-defaults)
 (provide 'programming-setup)
