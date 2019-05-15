@@ -16,6 +16,9 @@
 ** DONE Ctrl-W
 ** DONE kill ring stuff
 ** TODO go
+
+- load up everything in the go mode hook
+
 ** TODO rust
 ** DONE markdown
 ** DONE refine magit setup (full screen magit)
@@ -36,3 +39,6 @@
 ** TODO ruby setup - checkers etc...
 ** TODO gist.el
 ** TODO stdin buffers => ensure don't go into recentf
+** TODO Pinch the modeline from spacemacs
+** TODO yasnippets
+** TODO powershell
