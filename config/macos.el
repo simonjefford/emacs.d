@@ -15,4 +15,6 @@
     (message "Command is now bound to SUPER and Option is bound to META.")))
 (swap-meta-and-super)
 
+(delete-file "~/Library/Colors/Emacs.clr")
+
 (provide 'macos)
