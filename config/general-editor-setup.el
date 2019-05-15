@@ -138,4 +138,6 @@ The body of the advice is in BODY."
 (bind-key "C-s" 'isearch-forward-regexp)
 (bind-key "C-r" 'isearch-backward-regexp)
 
+(bind-key "M-RET" 'crux-smart-open-line)
+
 (provide 'general-editor-setup)
