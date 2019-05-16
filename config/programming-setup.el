@@ -1,6 +1,8 @@
 (use-package lsp-mode
   :init
-  (setq lsp-session-file (expand-file-name "lsp-session-v1" sjj-savefile-dir))
+  (progn
+    (setq lsp-prefer-flymake nil)
+    (setq lsp-session-file (expand-file-name "lsp-session-v1" sjj-savefile-dir)))
   :commands lsp
   :ensure t)
 
