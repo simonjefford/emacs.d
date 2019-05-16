@@ -32,6 +32,6 @@
 (load-theme 'solarized-dark)
 
 (when (fboundp 'set-fontset-font)
-  (set-fontset-font t 'unicode "Apple Color Emoji" nil 'prepend))
+  (set-fontset-font t 'unicode "Symbola" nil 'prepend))
 
 (provide 'ui)
