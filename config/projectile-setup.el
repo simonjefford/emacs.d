@@ -8,9 +8,4 @@
   :config
   (projectile-mode +1))
 
-(use-package counsel-projectile
-  :ensure t
-  :config
-  (counsel-projectile-mode +1))
-
 (provide 'projectile-setup)

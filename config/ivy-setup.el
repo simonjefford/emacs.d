@@ -16,3 +16,8 @@
   :ensure t)
 
 (provide 'ivy-setup)
+
+(use-package counsel-projectile
+  :ensure t
+  :config
+  (counsel-projectile-mode +1))
