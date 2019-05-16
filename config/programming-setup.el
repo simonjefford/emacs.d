@@ -33,6 +33,9 @@
 (use-package dockerfile-mode
   :ensure t)
 
+(use-package yasnippet
+  :ensure t)
+
 (setq compilation-ask-about-save nil)
 
 (sp-pair "{" nil :post-handlers
