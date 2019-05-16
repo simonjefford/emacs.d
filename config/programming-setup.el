@@ -47,4 +47,7 @@
   (smartparens-mode +1))
 
 (add-hook 'prog-mode-hook 'sjj-prog-mode-defaults)
+
+(setq projectile-project-compilation-cmd "")
+
 (provide 'programming-setup)
