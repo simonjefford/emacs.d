@@ -30,10 +30,14 @@
   :defer t
   :init (load-theme 'spacemacs-dark t))
 
-;; spaceline dependency
+;; stuff to put into spaceline
 (use-package winum :ensure t)
 (use-package eyebrowse :ensure t)
 (use-package persp-mode :ensure t)
+(use-package anzu
+  :ensure t
+  :init (setq anzu-cons-mode-line-p nil)
+  :config (global-anzu-mode +1))
 
 (use-package spaceline
   :ensure t

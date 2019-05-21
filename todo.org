@@ -46,4 +46,4 @@
 ** TODO recentf cleaning
 ** TODO emacs 1password integration so can run terraform plan etc...
 ** TODO comment via M-:
-** TODO anzu
+** DONE anzu
