@@ -47,4 +47,13 @@
 (when (fboundp 'set-fontset-font)
   (set-fontset-font t 'unicode "Symbola" nil 'prepend))
 
+(use-package diminish
+  :ensure t)
+
+(mapcar 'diminish (list 'editorconfig-mode
+			'which-key-mode
+			'projectile-mode
+			'smartparens-mode
+			'eldoc-mode))
+
 (provide 'ui)
