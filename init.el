@@ -4,6 +4,9 @@
 (add-to-list 'load-path main-config-dir)
 
 (require 'package-setup)
+(setq custom-file "~/.emacs.d/custom.el")
+(when (file-exists-p custom-file)
+  (load custom-file))
 (require 'ui)
 (when (eq system-type 'darwin)
   (require 'macos))
@@ -35,7 +38,3 @@
 (defun recompile-init ()
   (interactive)
   (byte-recompile-directory emacsd 0))
-
-(setq custom-file "~/.emacs.d/custom.el")
-(when (file-exists-p custom-file)
-  (load custom-file))
