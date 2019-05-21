@@ -2,7 +2,7 @@
   :ensure t
   :bind (("M-t" . 'projectile-find-file))
   :init
-  (setq projectile-switch-project-action 'projectile-vc)
+  (setq projectile-switch-project-action 'projectile-find-file)
   :bind-keymap
   ("s-p" . projectile-command-map)
   :config
