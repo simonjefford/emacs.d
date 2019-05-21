@@ -36,6 +36,9 @@
 (use-package yasnippet
   :ensure t)
 
+(use-package gist
+  :ensure t)
+
 (setq compilation-ask-about-save nil)
 
 (sp-pair "{" nil :post-handlers
