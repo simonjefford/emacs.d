@@ -26,10 +26,23 @@
 ;; enable y/n answers
 (fset 'yes-or-no-p 'y-or-n-p)
 
-(use-package solarized-theme
-  :ensure t)
+(use-package spacemacs-theme
+  :defer t
+  :init (load-theme 'spacemacs-dark t))
 
-(load-theme 'solarized-dark)
+;; spaceline dependency
+(use-package winum :ensure t)
+(use-package eyebrowse :ensure t)
+(use-package persp-mode :ensure t)
+
+(use-package spaceline
+  :ensure t
+  :init (progn
+	  (setq powerline-default-separator 'wave))
+  :config (progn
+	    (require 'spaceline-config)
+	    (spaceline-emacs-theme)
+	    (spaceline-helm-mode)))
 
 (when (fboundp 'set-fontset-font)
   (set-fontset-font t 'unicode "Symbola" nil 'prepend))
