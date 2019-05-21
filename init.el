@@ -38,3 +38,5 @@
 (defun recompile-init ()
   (interactive)
   (byte-recompile-directory emacsd 0))
+
+(diminish-all-the-things)

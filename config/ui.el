@@ -54,10 +54,12 @@
 (use-package diminish
   :ensure t)
 
-(mapcar 'diminish (list 'editorconfig-mode
+(defun diminish-all-the-things ()
+  (mapcar 'diminish (list 'editorconfig-mode
 			'which-key-mode
 			'projectile-mode
 			'smartparens-mode
-			'eldoc-mode))
+			'eldoc-mode
+			'anzu-mode)))
 
 (provide 'ui)
