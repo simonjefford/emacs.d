@@ -39,4 +39,9 @@
   (interactive)
   (byte-recompile-directory emacsd 0))
 
+(use-package highlight-indentation
+  :defer)
+
+(add-hook 'yaml-mode-hook 'highlight-indentation-mode)
+
 (diminish-all-the-things)
