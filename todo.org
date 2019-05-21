@@ -22,17 +22,16 @@
 ** TODO rust
 ** DONE markdown
 ** DONE refine magit setup (full screen magit)
-** TODO isearch command history
+** DONE isearch command history
 ** DONE save on lost focus
 ** TODO magit pinning
 ** TODO org mode
 ** TODO emacs lisp tab completion
-** TODO mode line stuff
+** DONE mode line stuff
 
 - diminish / delight
 - theme
 
-** TODO ivy completion typing order = not good at the moment
 ** DONE flycheck
 ** TODO configure company mode nicely
 ** DONE terraform
