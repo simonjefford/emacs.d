@@ -12,7 +12,7 @@
 ** DONE projectile
 ** DONE themes
 ** DONE git change view in gutter thingy
-** TODO general programming
+** DONE general programming
 ** DONE Ctrl-W
 ** DONE kill ring stuff
 ** TODO go
@@ -26,7 +26,7 @@
 ** DONE save on lost focus
 ** TODO magit pinning
 ** TODO org mode
-** TODO emacs list tab completion
+** TODO emacs lisp tab completion
 ** TODO mode line stuff
 
 - diminish / delight
@@ -37,8 +37,13 @@
 ** TODO configure company mode nicely
 ** DONE terraform
 ** TODO ruby setup - checkers etc...
-** TODO gist.el
+** DONE gist.el
 ** TODO stdin buffers => ensure don't go into recentf
-** TODO Pinch the modeline from spacemacs
-** TODO yasnippets
+** DONE Pinch the modeline from spacemacs
+** DONE yasnippets
 ** TODO powershell
+** TODO helm completion of magit branches etc
+** TODO recentf cleaning
+** TODO emacs 1password integration so can run terraform plan etc...
+** TODO comment via M-:
+** TODO anzu
