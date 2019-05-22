@@ -39,6 +39,8 @@
 (use-package gist
   :ensure t)
 
+(use-package powershell :ensure t)
+
 (setq compilation-ask-about-save nil)
 
 (sp-pair "{" nil :post-handlers
