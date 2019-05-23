@@ -46,3 +46,4 @@
 ** TODO emacs 1password integration so can run terraform plan etc...
 ** DONE comment via M-;
 ** DONE anzu
+** TODO Get omnisharp-emacs to find sln somehow...?
