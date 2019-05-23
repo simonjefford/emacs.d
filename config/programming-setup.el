@@ -41,6 +41,10 @@
 
 (use-package powershell :ensure t)
 
+(use-package evil-nerd-commenter
+  :ensure t
+  :config (evilnc-default-hotkeys))
+
 (setq compilation-ask-about-save nil)
 
 (sp-pair "{" nil :post-handlers
