@@ -55,11 +55,15 @@
   :ensure t)
 
 (defun diminish-all-the-things ()
+  (interactive)
   (mapcar 'diminish (list 'editorconfig-mode
 			'which-key-mode
 			'projectile-mode
 			'smartparens-mode
 			'eldoc-mode
-			'anzu-mode)))
+			'anzu-mode
+			'highlight-indentation-mode
+			'company-mode
+			'omnisharp-mode)))
 
 (provide 'ui)
