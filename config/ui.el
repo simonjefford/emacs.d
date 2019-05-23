@@ -28,7 +28,7 @@
 
 (use-package spacemacs-theme
   :defer t
-  :init (load-theme 'spacemacs-dark t))
+  :init (load-theme 'spacemacs-light t))
 
 ;; stuff to put into spaceline
 (use-package winum :ensure t)
