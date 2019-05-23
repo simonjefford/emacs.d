@@ -139,5 +139,6 @@ The body of the advice is in BODY."
 (bind-key "C-r" 'isearch-backward-regexp)
 
 (bind-key "M-RET" 'crux-smart-open-line)
+(bind-key "s-o" 'crux-smart-open-line-above)
 
 (provide 'general-editor-setup)

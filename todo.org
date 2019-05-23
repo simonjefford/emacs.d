@@ -40,7 +40,7 @@
 ** TODO stdin buffers => ensure don't go into recentf
 ** DONE Pinch the modeline from spacemacs
 ** DONE yasnippets
-** TODO powershell
+** DONE powershell
 ** TODO helm completion of magit branches etc
 ** TODO recentf cleaning
 ** TODO emacs 1password integration so can run terraform plan etc...

@@ -11,3 +11,5 @@
 *.elc
 /savefile
 /xkcd
+/.cache
+/url
