@@ -80,7 +80,10 @@
 	(xkcd-dir (expand-file-name "xkcd" emacsd)))
     (cl-some (lambda (dir)
                (string-prefix-p dir file-dir))
-             (mapcar 'file-truename (list sjj-savefile-dir package-user-dir xkcd-dir)))))
+             (mapcar 'file-truename (list sjj-savefile-dir
+					  package-user-dir
+					  xkcd-dir
+					  temporary-file-directory)))))
 
 (add-to-list 'recentf-exclude 'sjj-recentf-exclude-p)
 
