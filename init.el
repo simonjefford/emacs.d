@@ -21,6 +21,7 @@
 (require 'rust-setup)
 (require 'csharp-setup)
 (require 'terraform-setup)
+(require 'org-setup)
 
 (use-package discover-my-major
   :ensure t)
