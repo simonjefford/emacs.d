@@ -64,6 +64,7 @@
 			'anzu-mode
 			'highlight-indentation-mode
 			'company-mode
+			'flyspell-mode
 			'omnisharp-mode)))
 
 (provide 'ui)

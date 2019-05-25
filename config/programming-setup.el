@@ -53,6 +53,7 @@
 
 (defun sjj-prog-mode-defaults()
   (set (make-local-variable 'comment-auto-fill-only-comments) t)
+  (flyspell-prog-mode)
   (smartparens-mode +1))
 
 (add-hook 'prog-mode-hook 'sjj-prog-mode-defaults)
