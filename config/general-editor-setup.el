@@ -59,7 +59,7 @@
 (require 'savehist)
 (setq savehist-additional-variables
       ;; search entries
-      '(search-ring regexp-search-ring)
+      '(search-ring regexp-search-ring extended-command-history)
       ;; save every minute
       savehist-autosave-interval 60
       ;; keep the home clean
