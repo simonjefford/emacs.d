@@ -1,7 +1,9 @@
 (defvar emacsd (file-name-directory load-file-name))
 (defvar main-config-dir (expand-file-name "config" emacsd))
+(defvar vendor-dir (expand-file-name "vendor" emacsd))
 
 (add-to-list 'load-path main-config-dir)
+(add-to-list 'load-path vendor-dir)
 
 (require 'package-setup)
 (setq custom-file "~/.emacs.d/custom.el")

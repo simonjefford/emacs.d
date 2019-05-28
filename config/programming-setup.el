@@ -60,4 +60,7 @@
 
 (setq projectile-project-compilation-cmd "")
 
+(require 'kubectx)
+(kubectx-mode 1)
+
 (provide 'programming-setup)
