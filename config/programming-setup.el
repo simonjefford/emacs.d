@@ -53,6 +53,7 @@
 
 (defun sjj-prog-mode-defaults()
   (set (make-local-variable 'comment-auto-fill-only-comments) t)
+  (setq flyspell-prog-text-faces '(font-lock-command-face font-lock-doc-face))
   (flyspell-prog-mode)
   (smartparens-mode +1))
 
