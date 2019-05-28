@@ -17,6 +17,7 @@
 ** DONE kill ring stuff
 ** TODO go
 
+- get lsp configured properly
 - load up everything in the go mode hook
 
 ** TODO rust
@@ -47,3 +48,4 @@
 ** DONE comment via M-;
 ** DONE anzu
 ** TODO Get omnisharp-emacs to find sln somehow...?
+** TODO Flycheck checker for terraform
