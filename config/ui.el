@@ -30,6 +30,19 @@
   :defer t
   :init (load-theme 'spacemacs-light t))
 
+(defun go-dark ()
+  (interactive)
+  (load-theme 'spacemacs-dark)
+  (spaceline-compile))
+
+(defun go-light ()
+  (interactive)
+  (load-theme 'spacemacs-light)
+  (spaceline-compile))
+
+(bind-key "C-x t d" 'go-dark)
+(bind-key "C-x t l" 'go-light)
+
 ;; stuff to put into spaceline
 (use-package winum :ensure t)
 (use-package eyebrowse :ensure t)
