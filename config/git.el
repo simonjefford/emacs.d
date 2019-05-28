@@ -29,4 +29,21 @@
   ad-do-it
   (delete-other-windows))
 
+(defun sjj-magit-command-in-project-dir (command)
+  (let ((command-dir (or (projectile-project-root) default-directory)))
+    (magit--shell-command command command-dir)))
+
+(defun sjj-hub-browse()
+  (interactive)
+  (sjj-magit-command-in-project-dir "hub browse"))
+
+
+(defun sjj-hub-browse()
+  (interactive)
+  (sjj-magit-command-in-project-dir "hub browse"))
+
+(defun sjj-hub-pullrequest()
+  (interactive)
+  (sjj-magit-command-in-project-dir "hub pull-request"))
+
 (provide 'git)
