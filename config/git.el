@@ -37,11 +37,6 @@
   (interactive)
   (sjj-magit-command-in-project-dir "hub browse"))
 
-
-(defun sjj-hub-browse()
-  (interactive)
-  (sjj-magit-command-in-project-dir "hub browse"))
-
 (defun sjj-hub-pullrequest()
   (interactive)
   (sjj-magit-command-in-project-dir "hub pull-request"))
