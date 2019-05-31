@@ -33,12 +33,27 @@
   (let ((command-dir (or (projectile-project-root) default-directory)))
     (magit--shell-command command command-dir)))
 
-(defun sjj-hub-browse()
-  (interactive)
-  (sjj-magit-command-in-project-dir "hub browse"))
+(defun sjj-hub-command-in-project-dir (command)
+  (sjj-magit-command-in-project-dir (concat "hub " command)))
 
-(defun sjj-hub-pullrequest()
+(defun sjj-hub-browse ()
   (interactive)
-  (sjj-magit-command-in-project-dir "hub pull-request"))
+  (sjj-hub-command-in-project-dir "browse"))
+
+(defun sjj-hub-pullrequest ()
+  (interactive)
+  (sjj-hub-command-in-project-dir "pull-request"))
+
+(defun sjj-hub-cistatus ()
+  (interactive)
+  (sjj-hub-command-in-project-dir "ci-status -v --color=never"))
+
+(defun sjj-hub-create-issue ()
+  (interactive)
+  (sjj-hub-command-in-project-dir "issue create"))
+
+(defun sjj-hub-show-issues ()
+  (interactive)
+  (sjj-hub-command-in-project-dir "issue"))
 
 (provide 'git)
