@@ -18,6 +18,8 @@
 (use-package go-projectile
   :ensure t)
 
+(use-package gotest :ensure t)
+
 (require 'lsp-go)
 
 (provide 'go-setup)
