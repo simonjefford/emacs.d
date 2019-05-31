@@ -70,14 +70,14 @@
 (defun diminish-all-the-things ()
   (interactive)
   (mapcar 'diminish (list 'editorconfig-mode
-			'which-key-mode
-			'projectile-mode
-			'smartparens-mode
-			'eldoc-mode
-			'anzu-mode
-			'highlight-indentation-mode
-			'company-mode
-			'flyspell-mode
-			'omnisharp-mode)))
+			  'which-key-mode
+			  'projectile-mode
+			  'smartparens-mode
+			  'eldoc-mode
+			  'anzu-mode
+			  'highlight-indentation-mode
+			  'company-mode
+			  'flyspell-mode
+			  'omnisharp-mode)))
 
 (provide 'ui)
