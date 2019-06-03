@@ -24,6 +24,7 @@
 (require 'csharp-setup)
 (require 'terraform-setup)
 (require 'org-setup)
+(require 'markdown-setup)
 
 (use-package discover-my-major
   :ensure t)
@@ -32,12 +33,6 @@
 
 (use-package xkcd
   :ensure t)
-
-(use-package markdown-mode
-  :ensure t
-  :commands (markdown-mode gfm-mode)
-  :mode (("\\.md" . gfm-mode)
-	 ("\\.markdown" . gfm-mode)))
 
 (defun recompile-init ()
   (interactive)
