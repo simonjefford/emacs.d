@@ -1,8 +1,10 @@
 (defvar emacsd (file-name-directory load-file-name))
 (defvar main-config-dir (expand-file-name "config" emacsd))
+(defvar modes-dir (expand-file-name "modes" emacsd))
 (defvar vendor-dir (expand-file-name "vendor" emacsd))
 
 (add-to-list 'load-path main-config-dir)
+(add-to-list 'load-path modes-dir)
 (add-to-list 'load-path vendor-dir)
 
 (require 'package-setup)
@@ -25,6 +27,8 @@
 (require 'terraform-setup)
 (require 'org-setup)
 (require 'markdown-setup)
+
+(require 'slides-mode)
 
 (use-package discover-my-major
   :ensure t)
