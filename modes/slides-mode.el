@@ -15,6 +15,7 @@ inline code fragments and code blocks.")
 (setq slides-highlights
       '(("\\.image" . font-lock-function-name-face)
 	("^  .*$" . 'slide-code-face)
+	("^#.*$" . font-lock-comment-face)
 	("^:.*$" . 'slide-notes-face)
 	("^\\*.*$" . 'slide-heading-face)))
 
