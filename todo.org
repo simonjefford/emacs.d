@@ -49,3 +49,4 @@
 ** DONE anzu
 ** TODO Get omnisharp-emacs to find sln somehow...?
 ** TODO Flycheck checker for terraform
+** TODO Spell checking in org, markdown and commit modes
