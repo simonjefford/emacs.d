@@ -64,4 +64,6 @@
 (require 'kubectx)
 (kubectx-mode 1)
 
+(use-package coffee-mode :ensure t)
+
 (provide 'programming-setup)
