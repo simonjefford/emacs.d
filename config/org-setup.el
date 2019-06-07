@@ -9,6 +9,17 @@
     (push (org-projectile-project-todo-entry) org-capture-templates))
   :ensure t)
 
+;; TODO - how to get this to work?
+;; (add-hook 'org-mode-hook (lambda ()
+;; 			   (add-to-list 'org-latex-classes
+;; 					'("koma-article"
+;; 					  "\\documentclass{scrartcl}"
+;; 					  ("\\section{%s}" . "\\section*{%s}")
+;; 					  ("\\subsection{%s}" . "\\subsection*{%s}")
+;; 					  ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+;; 					  ("\\paragraph{%s}" . "\\paragraph*{%s}")
+;; 					  ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))))
+
 (defvar sjj-ideas-org-file "~/Documents/ideas.org")
 
 (defun sjj-open-ideas()
