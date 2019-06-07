@@ -115,12 +115,12 @@ The body of the advice is in BODY."
 (add-hook 'focus-out-hook 'save-if-appropriate)
 
 (bind-key "s->" (lambda()
-		    (interactive)
-		    (enlarge-window 1)))
+		  (interactive)
+		  (enlarge-window 1)))
 
 (bind-key "s-<" (lambda()
-		    (interactive)
-		    (shrink-window 1)))
+		  (interactive)
+		  (shrink-window 1)))
 
 (bind-key "C-s->" (lambda()
 		    (interactive)
