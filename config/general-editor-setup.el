@@ -144,4 +144,8 @@ The body of the advice is in BODY."
 (bind-key "M-RET" 'crux-smart-open-line)
 (bind-key "s-o" 'crux-smart-open-line-above)
 
+(use-package "eterm-256color"
+  :ensure t
+  :init (add-hook 'term-mode-hook #'eterm-256color-mode))
+
 (provide 'general-editor-setup)
