@@ -148,4 +148,10 @@ The body of the advice is in BODY."
   :ensure t
   :init (add-hook 'term-mode-hook #'eterm-256color-mode))
 
+(defun what-face (pos)
+  (interactive "d")
+  (let ((face (or (get-char-property (point) 'read-face-name)
+		  (get-char-property (point) 'face))))
+    (if face (message "Face: %s" face) (message "No face at %d" pos))))
+
 (provide 'general-editor-setup)
