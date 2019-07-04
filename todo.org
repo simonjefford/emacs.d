@@ -50,3 +50,4 @@
 ** TODO Get omnisharp-emacs to find sln somehow...?
 ** TODO Flycheck checker for terraform
 ** TODO Spell checking in org, markdown and commit modes
+** TODO set GO111module=on when switching to a project with a go.mod
