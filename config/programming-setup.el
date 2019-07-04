@@ -66,4 +66,12 @@
 
 (use-package coffee-mode :ensure t)
 
+(defun sjj-visit-powershell-buffer ()
+  (interactive)
+  (crux-start-or-switch-to (lambda()
+			     (ansi-term "/usr/local/bin/pwsh" "powershell"))
+			   "*powershell*"))
+
+(bind-key "C-c s" 'sjj-visit-powershell-buffer)
+
 (provide 'programming-setup)
