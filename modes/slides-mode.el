@@ -1,5 +1,5 @@
 (defface slide-heading-face
-  '((t (:inherit font-lock-function-name-face :height 1.5)))
+  '((t (:inherit font-lock-function-name-face :height 1.2)))
   "Face for slide headers")
 
 (defface slide-code-face
