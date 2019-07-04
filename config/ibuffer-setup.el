@@ -24,6 +24,7 @@
                     (mode . js-mode)
                     (mode . coffee-mode)))
           ("Docs" (or (mode . markdown-mode)
+		      (mode . slides-mode)
                       (mode . showoff-mode)
                       (mode . gfm-mode)))
           ("Configuration" (or (mode . json-mode)
