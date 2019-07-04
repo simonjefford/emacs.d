@@ -156,4 +156,8 @@ The body of the advice is in BODY."
 		  (get-char-property (point) 'face))))
     (if face (message "Face: %s" face) (message "No face at %d" pos))))
 
+(use-package "edit-server"
+  :ensure t
+  :config (edit-server-start))
+
 (provide 'general-editor-setup)
