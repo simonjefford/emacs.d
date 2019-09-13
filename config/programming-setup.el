@@ -14,6 +14,9 @@
   :ensure t
   :commands lsp-ui-mode)
 
+(use-package typescript-mode
+  :ensure t)
+
 (use-package company-lsp
   :ensure t
   :commands company-lsp)
