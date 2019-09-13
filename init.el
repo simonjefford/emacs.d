@@ -27,7 +27,7 @@
 (require 'terraform-setup)
 (require 'org-setup)
 (require 'markdown-setup)
-
+(require 'ruby-setup)
 (require 'slides-mode)
 
 (use-package discover-my-major
