@@ -3,23 +3,19 @@
   (progn
     (setq gofmt-command "goimports")
     (add-hook 'before-save-hook #'gofmt-before-save)
-    (add-hook 'go-mode-hook #'company-mode))
+    (add-hook 'go-mode-hook #'company-mode)
+    (subword-mode)
+    (add-hook 'go-mode-hook #'lsp-deferred))
+    :bind (:map go-mode-map
+	      ("M-." . lsp-ui-peek-find-definitions))
   :ensure t)
 
 (use-package go-guru
-  :bind (:map go-mode-map
-	      ("M-." . go-guru-definition))
   :ensure t)
-
-(use-package company-go
-  :ensure t
-  :config (add-to-list 'company-backends 'company-go))
 
 (use-package go-projectile
   :ensure t)
 
 (use-package gotest :ensure t)
-
-(require 'lsp-go)
 
 (provide 'go-setup)
