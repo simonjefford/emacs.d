@@ -160,4 +160,7 @@ The body of the advice is in BODY."
   :ensure t
   :config (edit-server-start))
 
+(use-package "neotree"
+  :ensure t)
+
 (provide 'general-editor-setup)
