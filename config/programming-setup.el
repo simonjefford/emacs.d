@@ -2,11 +2,15 @@
   :init
   (progn
     (setq lsp-prefer-flymake nil)
-    (setq lsp-session-file (expand-file-name "lsp-session-v1" sjj-savefile-dir)))
-  :commands lsp
+    (setq lsp-session-file (expand-file-name "lsp-session-v1" sjj-savefile-dir))
+    (setq lsp-auto-guess-root 't))
+  :commands (lsp lsp-deferred)
   :ensure t)
 
 (use-package lsp-ui
+  :init
+  (progn
+    (setq lsp-ui-sideline-enable nil))
   :ensure t
   :commands lsp-ui-mode)
 
