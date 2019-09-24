@@ -15,7 +15,7 @@
 ** DONE general programming
 ** DONE Ctrl-W
 ** DONE kill ring stuff
-** TODO go
+** DONE go
 
 - get lsp configured properly
 - load up everything in the go mode hook
@@ -38,16 +38,16 @@
 ** DONE terraform
 ** TODO ruby setup - checkers etc...
 ** DONE gist.el
-** TODO stdin buffers => ensure don't go into recentf
+** DONE stdin buffers => ensure don't go into recentf
 ** DONE Pinch the modeline from spacemacs
 ** DONE yasnippets
 ** DONE powershell
 ** TODO helm completion of magit branches etc
-** TODO recentf cleaning
+** DONE recentf cleaning
 ** TODO emacs 1password integration so can run terraform plan etc...
 ** DONE comment via M-;
 ** DONE anzu
-** TODO Get omnisharp-emacs to find sln somehow...?
+** DONE Get omnisharp-emacs to find sln somehow...?
 ** TODO Flycheck checker for terraform
 ** TODO Spell checking in org, markdown and commit modes
 ** TODO set GO111module=on when switching to a project with a go.mod
