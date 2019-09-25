@@ -6,8 +6,10 @@
     (add-hook 'go-mode-hook #'company-mode)
     (subword-mode)
     (add-hook 'go-mode-hook #'lsp-deferred))
-    :bind (:map go-mode-map
-	      ("M-." . lsp-ui-peek-find-definitions))
+
+  :bind
+  (:map go-mode-map
+	("M-." . lsp-ui-peek-find-definitions))
   :ensure t)
 
 (use-package go-guru
