@@ -27,6 +27,7 @@
 (fset 'yes-or-no-p 'y-or-n-p)
 
 (use-package spacemacs-theme
+  :ensure t
   :defer t
   :init (load-theme 'spacemacs-light t))
 
