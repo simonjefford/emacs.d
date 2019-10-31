@@ -46,7 +46,8 @@
 
 ;; stuff to put into spaceline
 (use-package winum :ensure t)
-(use-package eyebrowse :ensure t)
+(use-package eyebrowse :ensure t
+  :config (eyebrowse-mode t))
 (use-package persp-mode :ensure t)
 (use-package anzu
   :ensure t
