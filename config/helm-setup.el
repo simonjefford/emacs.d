@@ -15,7 +15,9 @@
 		helm-move-to-line-cycle-in-source     t
 		helm-ff-search-library-in-sexp        t
 		helm-ff-file-name-history-use-recentf t))
-  :config (require 'helm-config)
+  :config (progn
+	    (require 'helm-config)
+	    (helm-mode 1))
   :bind (:map helm-command-map
 	      ("o" . 'helm-occur)))
 
