@@ -24,7 +24,55 @@
 (use-package flycheck
   :ensure t
   :config
-  (global-flycheck-mode +1))
+  (progn
+    (setq flycheck-checkers '(lsp-ui
+			      chef-foodcritic
+			      css-csslint
+			      css-stylelint
+			      dockerfile-hadolint
+			      emacs-lisp
+			      emacs-lisp-checkdoc
+			      go-gofmt
+			      go-golint
+			      go-vet
+			      go-build
+			      go-test
+			      go-unconvert
+			      groovy
+			      html-tidy
+			      javascript-eslint
+			      javascript-jshint
+			      javascript-standard
+			      json-jsonlint
+			      json-python-json
+			      json-jq
+			      jsonnet
+			      markdown-markdownlint-cli
+			      markdown-mdl
+			      protobuf-protoc
+			      protobuf-prototool
+			      puppet-parser
+			      puppet-lint
+			      rpm-rpmlint
+			      ruby-rubocop
+			      ruby-reek
+			      ruby-rubylint
+			      ruby
+			      ruby-jruby
+			      rust-cargo
+			      rust
+			      rust-clippy
+			      sh-posix-bash
+			      sh-zsh
+			      sh-shellcheck
+			      terraform
+			      terraform-tflint
+			      typescript-tslint
+			      xml-xmlstarlet
+			      xml-xmllint
+			      yaml-jsyaml
+			      yaml-ruby))
+    (global-flycheck-mode +1)))
 
 ;; "incidental" language setup
 (use-package groovy-mode
@@ -41,7 +89,8 @@
   :ensure t)
 
 (use-package yasnippet
-  :ensure t)
+  :ensure t
+  :config (yas-global-mode))
 
 (use-package gist
   :ensure t)
