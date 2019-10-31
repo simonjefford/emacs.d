@@ -42,7 +42,7 @@
 ** DONE Pinch the modeline from spacemacs
 ** DONE yasnippets
 ** DONE powershell
-** TODO helm completion of magit branches etc
+** DONE helm completion of magit branches etc
 ** DONE recentf cleaning
 ** TODO emacs 1password integration so can run terraform plan etc...
 ** DONE comment via M-;
