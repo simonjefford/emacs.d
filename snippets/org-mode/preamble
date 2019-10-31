@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name: org-preamble
+# key: preamble
+# --
+
+#+STARTUP: indent
+#+OPTIONS: num:nil toc:nil
+#+TITLE: $1
+#+HTML_HEAD: <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="style.css" />
+
+$0
