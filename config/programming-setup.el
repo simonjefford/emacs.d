@@ -101,6 +101,8 @@
   :ensure t
   :config (evilnc-default-hotkeys))
 
+(use-package web-mode :ensure t)
+
 (setq compilation-ask-about-save nil)
 
 (sp-pair "{" nil :post-handlers
