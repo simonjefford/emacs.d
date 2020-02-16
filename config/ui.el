@@ -75,11 +75,14 @@
 			  'which-key-mode
 			  'projectile-mode
 			  'smartparens-mode
+			  'helm-mode
 			  'eldoc-mode
 			  'anzu-mode
+			  'yas-global-mode
 			  'highlight-indentation-mode
 			  'company-mode
 			  'flyspell-mode
+			  'yas-minor-mode
 			  'omnisharp-mode)))
 
 (provide 'ui)
