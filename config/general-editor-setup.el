@@ -163,4 +163,7 @@ The body of the advice is in BODY."
 (use-package "neotree"
   :ensure t)
 
+(use-package "savekill"
+  :ensure t)
+
 (provide 'general-editor-setup)
