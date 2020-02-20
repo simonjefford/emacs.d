@@ -97,9 +97,11 @@
 
 (use-package powershell :ensure t)
 
+;; evilnc-default-hotkeys stopped working and M-; is the only shortcut
+;; I ever use anyway
 (use-package evil-nerd-commenter
   :ensure t
-  :config (evilnc-default-hotkeys))
+  :config (global-set-key (kbd "M-;") 'evilnc-comment-or-uncomment-lines))
 
 (use-package web-mode :ensure t)
 
