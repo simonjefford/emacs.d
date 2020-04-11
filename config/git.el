@@ -24,6 +24,9 @@
     (add-hook 'magit-post-refresh-hook 'diff-hl-magit-post-refresh)
     (add-hook 'dired-mode-hook 'diff-hl-dired-mode)))
 
+(use-package github-browse-file
+  :ensure t)
+
 (defadvice magit-status (around magit-fullscreen activate)
   (window-configuration-to-register :magit-fullscreen)
   ad-do-it

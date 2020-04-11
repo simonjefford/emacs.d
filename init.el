@@ -29,6 +29,7 @@
 (require 'markdown-setup)
 (require 'ruby-setup)
 (require 'slides-mode)
+(require 'r-setup)
 
 (use-package discover-my-major
   :ensure t)
