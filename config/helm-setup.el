@@ -14,6 +14,8 @@
 		helm-buffers-fuzzy-matching           t
 		helm-move-to-line-cycle-in-source     t
 		helm-ff-search-library-in-sexp        t
+		history-delete-duplicates             t
+		history-length                        200
 		helm-ff-file-name-history-use-recentf t))
   :config (progn
 	    (require 'helm-config)
