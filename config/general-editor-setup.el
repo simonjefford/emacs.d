@@ -166,4 +166,7 @@ The body of the advice is in BODY."
 (use-package "savekill"
   :ensure t)
 
+(use-package "htmlize"
+  :ensure t)
+
 (provide 'general-editor-setup)
