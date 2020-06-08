@@ -169,4 +169,7 @@ The body of the advice is in BODY."
 (use-package "htmlize"
   :ensure t)
 
+(use-package literate-calc-mode
+  :ensure t)
+
 (provide 'general-editor-setup)
