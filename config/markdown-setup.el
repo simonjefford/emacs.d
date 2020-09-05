@@ -6,7 +6,7 @@
 
 (defun sjj-preview-markdown ()
   (interactive)
-  (let ((command (concat "vmd " buffer-file-name)))
-    (async-shell-command command)))
+  (let ((command (concat "open -a \"Marked 2\" " buffer-file-name)))
+    (shell-command command)))
 
 (provide 'markdown-setup)
