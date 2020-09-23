@@ -50,3 +50,4 @@
 (add-hook 'yaml-mode-hook 'highlight-indentation-mode)
 
 (diminish-all-the-things)
+(put 'set-goal-column 'disabled nil)
