@@ -3,6 +3,9 @@
   (progn
     (setq lsp-prefer-flymake nil)
     (setq lsp-session-file (expand-file-name "lsp-session-v1" sjj-savefile-dir))
+    (setq lsp-signature-render-documentation nil)
+    (setq lsp-signature-doc-lines 0)
+    (setq lsp-signature-auto-activate nil)
     (setq lsp-auto-guess-root 't))
   :commands (lsp lsp-deferred)
   :ensure t)
@@ -25,9 +28,7 @@
   :ensure t
   :config
   (progn
-    (setq flycheck-checkers '(lsp-ui
-			      chef-foodcritic
-			      css-csslint
+    (setq flycheck-checkers '(css-csslint
 			      css-stylelint
 			      dockerfile-hadolint
 			      emacs-lisp

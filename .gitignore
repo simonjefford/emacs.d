@@ -16,3 +16,5 @@
 /eshell
 /var
 /kill-ring-saved.el
+/.dap-breakpoints
+/eclipse.jdt.ls/
