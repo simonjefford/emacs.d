@@ -20,9 +20,9 @@
 (use-package typescript-mode
   :ensure t)
 
-(use-package company-lsp
-  :ensure t
-  :commands company-lsp)
+;; (use-package company-lsp
+;;   :ensure t
+;;   :commands company-lsp)
 
 (use-package flycheck
   :ensure t
