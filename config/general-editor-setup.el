@@ -113,6 +113,8 @@ The body of the advice is in BODY."
 
 (add-hook 'focus-out-hook 'save-if-appropriate)
 
+(bind-key "s-3" (lambda() (interactive)(insert "#")))
+
 (bind-key "s->" (lambda()
 		  (interactive)
 		  (enlarge-window 1)))
