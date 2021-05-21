@@ -31,17 +31,42 @@
   :defer t
   :init (load-theme 'spacemacs-light t))
 
+(use-package twilight-anti-bright-theme :ensure t)
+
+(use-package subatomic-theme :ensure t)
+
+(use-package subatomic256-theme :ensure t)
+
+
+(defun reset-themes ()
+  (dolist (i custom-enabled-themes)
+    (disable-theme i)))
+
 (defun sjj-go-dark ()
   (interactive)
-  (load-theme 'spacemacs-dark)
+  (reset-themes)
+  (load-theme 'spacemacs-light)
   (spaceline-compile))
 
 (defun sjj-go-light ()
   (interactive)
+  (reset-themes)
   (load-theme 'spacemacs-light)
   (spaceline-compile))
 
-(bind-key "C-x t d" 'sjj-go-dark)
+(defun sjj-twilight ()
+  (interactive)
+  (reset-themes)
+  (load-theme 'twilight-anti-bright)
+  (spaceline-compile))
+
+(defun sjj-subatomic ()
+  (interactive)
+  (reset-themes)
+  (load-theme 'subatomic)
+  (spaceline-compile))
+
+(bind-key "C-x t d" 'sjj-subatomic)
 (bind-key "C-x t l" 'sjj-go-light)
 
 ;; stuff to put into spaceline

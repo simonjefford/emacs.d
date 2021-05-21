@@ -1,5 +1,6 @@
 (use-package markdown-mode
   :ensure t
+  :config (setq-local flycheck-checkers '())
   :commands (markdown-mode gfm-mode)
   :mode (("\\.md" . gfm-mode)
 	 ("\\.markdown" . gfm-mode)))

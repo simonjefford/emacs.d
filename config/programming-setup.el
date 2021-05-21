@@ -106,6 +106,8 @@
 
 (use-package web-mode :ensure t)
 
+(use-package jsonnet-mode :ensure t)
+
 (setq compilation-ask-about-save nil)
 
 (sp-pair "{" nil :post-handlers
