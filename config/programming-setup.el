@@ -48,9 +48,7 @@
 			      json-python-json
 			      json-jq
 			      jsonnet
-			      markdown-markdownlint-cli
-			      markdown-mdl
-			      protobuf-protoc
+                              protobuf-protoc
 			      protobuf-prototool
 			      puppet-parser
 			      puppet-lint

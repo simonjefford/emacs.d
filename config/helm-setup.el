@@ -17,9 +17,7 @@
 		history-delete-duplicates             t
 		history-length                        200
 		helm-ff-file-name-history-use-recentf t))
-  :config (progn
-	    (require 'helm-config)
-	    (helm-mode 1))
+  :config (helm-mode 1)
   :bind (:map helm-command-map
 	      ("o" . 'helm-occur)))
 

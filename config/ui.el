@@ -45,7 +45,7 @@
 (defun sjj-go-dark ()
   (interactive)
   (reset-themes)
-  (load-theme 'spacemacs-light)
+  (load-theme 'spacemacs-dark)
   (spaceline-compile))
 
 (defun sjj-go-light ()
@@ -68,6 +68,13 @@
 
 (bind-key "C-x t d" 'sjj-subatomic)
 (bind-key "C-x t l" 'sjj-go-light)
+
+(defun name-of-the-file ()
+  "Gets the name of the file the current buffer is based on."
+  (interactive)
+  (insert (buffer-file-name (window-buffer (minibuffer-selected-window)))))
+
+(bind-key "C-c f" 'name-of-the-file)
 
 ;; stuff to put into spaceline
 (use-package winum :ensure t)
