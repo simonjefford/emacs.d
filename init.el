@@ -30,6 +30,7 @@
 (require 'slides-mode)
 (require 'r-setup)
 (require 'quelpa-setup)
+(require 'copilot-setup)
 
 (use-package discover-my-major
   :ensure t)
