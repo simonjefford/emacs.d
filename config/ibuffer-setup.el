@@ -10,7 +10,6 @@
                             (mode . less-css-mode)))
           ("CSS" (or (mode . css-mode)
                      (mode . scss-mode)))
-          (".NET" (mode . csharp-mode))
           ("HTML / HTML Templates" (mode . web-mode))
           ("Go" (mode . go-mode))
           ("Rust" (mode . rust-mode))

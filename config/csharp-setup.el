@@ -13,8 +13,4 @@
   (company-mode)
   (setq indent-tabs-mode nil))
 
-(use-package csharp-mode
-  :ensure t
-  :config (add-hook 'csharp-mode-hook #'sjj-csharp-mode-hook))
-
 (provide 'csharp-setup)

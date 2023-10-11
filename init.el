@@ -23,7 +23,6 @@
 (require 'emacs-lisp-setup)
 (require 'go-setup)
 (require 'rust-setup)
-(require 'csharp-setup)
 (require 'terraform-setup)
 (require 'org-setup)
 (require 'markdown-setup)
