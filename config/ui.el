@@ -72,7 +72,7 @@
 (bind-key "C-c b" 'browse-url)
 
 (defun name-of-the-file ()
-  "Gets the name of the file the current buffer is based on."
+  "Inserts the name of the file the current buffer is based on."
   (interactive)
   (insert (buffer-file-name (window-buffer (minibuffer-selected-window)))))
 
