@@ -29,6 +29,8 @@
 (require 'ruby-setup)
 (require 'slides-mode)
 (require 'r-setup)
+(require 'structurizr-mode)
+(require 'git-link)
 ;; (require 'quelpa-setup)
 ;; (require 'copilot-setup)
 
