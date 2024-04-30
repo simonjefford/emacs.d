@@ -69,6 +69,8 @@
 (bind-key "C-x t d" 'sjj-subatomic)
 (bind-key "C-x t l" 'sjj-go-light)
 
+(bind-key "C-c b" 'browse-url)
+
 (defun name-of-the-file ()
   "Gets the name of the file the current buffer is based on."
   (interactive)
