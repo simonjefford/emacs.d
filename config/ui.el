@@ -119,4 +119,8 @@
 			  'yas-minor-mode
 			  'omnisharp-mode)))
 
+(when (eq system-type 'darwin)
+  (set-face-attribute 'default nil
+                    :family "MesloLGS NF" :height 140 :weight 'normal))
+
 (provide 'ui)
