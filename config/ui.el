@@ -122,7 +122,7 @@
 			  'yas-minor-mode
 			  'omnisharp-mode)))
 
-(when (eq system-type 'darwin)
+(when (or (eq system-type 'darwin) (eq system-type 'gnu/linux))
   (set-face-attribute 'default nil
                     :family "MesloLGS NF" :height 140 :weight 'normal))
 
