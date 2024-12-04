@@ -146,4 +146,6 @@
 (add-hook 'compilation-filter-hook
           #'sjj-colorize-compilation)
 
+(setq git-link-open-in-browser 't)
+
 (provide 'programming-setup)

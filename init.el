@@ -15,6 +15,7 @@
 (when (eq system-type 'darwin)
   (require 'macos))
 (require 'git)
+(require 'git-link)
 (require 'projectile-setup)
 (require 'helm-setup)
 (require 'ibuffer-setup)
@@ -30,7 +31,7 @@
 (require 'slides-mode)
 (require 'r-setup)
 (require 'structurizr-mode)
-(require 'git-link)
+
 ;; (require 'quelpa-setup)
 ;; (require 'copilot-setup)
 
