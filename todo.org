@@ -50,3 +50,4 @@
 ** DONE Get omnisharp-emacs to find sln somehow...?
 ** TODO Flycheck checker for terraform
 ** TODO Spell checking in org, markdown and commit modes
+** TODO sjj-markdown-mode - make portable to linux and windows
