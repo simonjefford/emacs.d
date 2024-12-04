@@ -1,6 +1,11 @@
+(defun sjj-markdown-hook()
+  (progn
+    (setq-local flycheck-checkers '())
+    (visual-line-mode)))
+
 (use-package markdown-mode
   :ensure t
-  :config (setq-local flycheck-checkers '())
+  :config (add-hook 'markdown-mode-hook 'sjj-markdown-hook)
   :commands (markdown-mode gfm-mode)
   :mode (("\\.md" . gfm-mode)
 	 ("\\.markdown" . gfm-mode)))
