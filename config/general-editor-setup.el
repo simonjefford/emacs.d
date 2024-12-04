@@ -157,9 +157,9 @@ The body of the advice is in BODY."
 		  (get-char-property (point) 'face))))
     (if face (message "Face: %s" face) (message "No face at %d" pos))))
 
-(use-package "edit-server"
+(use-package "atomic-chrome"
   :ensure t
-  :config (edit-server-start))
+  :config (atomic-chrome-start-server))
 
 (use-package "neotree"
   :ensure t)
