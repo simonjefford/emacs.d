@@ -13,6 +13,7 @@
           ("CSS" (or (mode . css-mode)
                      (mode . scss-mode)))
           ("HTML / HTML Templates" (mode . web-mode))
+	  ("C#" (mode . csharp-mode))
           ("Go" (mode . go-mode))
           ("Rust" (mode . rust-mode))
           ("Terminals" (mode . term-mode))
