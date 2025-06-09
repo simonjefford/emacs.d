@@ -11,15 +11,15 @@
 (blink-cursor-mode -1)
 
 ;; disable the annoying bell ring
-(setq ring-bell-function 'ignore)
+(setopt ring-bell-function 'ignore)
 
 ;; disable startup screen
-(setq inhibit-startup-screen t)
+(setopt inhibit-startup-screen t)
 
 ;; nice scrolling
-(setq scroll-margin 0
-      scroll-conservatively 100000
-      scroll-preserve-screen-position 1)
+(setopt scroll-margin 0
+	scroll-conservatively 100000
+	scroll-preserve-screen-position 1)
 
 ;; mode line settings
 (line-number-mode t)
@@ -125,5 +125,7 @@
 (when (or (eq system-type 'darwin) (eq system-type 'gnu/linux))
   (set-face-attribute 'default nil
                     :family "MesloLGS NF" :height 140 :weight 'normal))
+
+(hl-line-mode)
 
 (provide 'ui)
