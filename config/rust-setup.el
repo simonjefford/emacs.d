@@ -1,8 +1,11 @@
 (use-package rust-mode
+  :hook (rust-mode-hook . lsp-deferred)
   :ensure t)
 
 (use-package flycheck-rust
   :ensure t
-  :config (add-hook 'flycheck-mode-hook #'flycheck-rust-setup))
+  :hook (flycheck-mode-hook . flycheck-rust-setup))
+
+(setq rust-format-on-save t)
 
 (provide 'rust-setup)
