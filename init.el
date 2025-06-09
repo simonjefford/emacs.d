@@ -55,3 +55,7 @@
 
 (diminish-all-the-things)
 (put 'set-goal-column 'disabled nil)
+
+(use-package envrc
+  :ensure
+  :config (envrc-global-mode))
