@@ -1,3 +1,6 @@
+(use-package ibuffer-projectile
+  :ensure t)
+
 (bind-key "C-x C-b" 'ibuffer)
 
 (setq ibuffer-saved-filter-groups
