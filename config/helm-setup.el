@@ -21,13 +21,14 @@
   :bind (:map helm-command-map
 	      ("o" . 'helm-occur)))
 
+;;(bind-key "s-p s s" 'helm-projectile-rg)
+
 (use-package helm-projectile
   :ensure t
   :config (progn
 	    (helm-projectile-on)))
 
-(use-package helm-ag
-  :ensure t)
+(require 'helm-ag)
 
 (use-package helm-descbinds
   :ensure t)

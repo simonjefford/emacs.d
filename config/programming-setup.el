@@ -148,4 +148,10 @@
 
 (setq git-link-open-in-browser 't)
 
+(use-package dash-docs
+  :ensure t)
+
+(use-package bazel
+  :ensure t)
+
 (provide 'programming-setup)
