@@ -11,7 +11,8 @@
 	 ("s-m b" . magit-blame-addition)
 	 :map magit-status-mode-map
 	 ("q" . 'magit-quit-session))
-  )
+  :config
+  (remove-hook 'magit-status-headers-hook 'magit-insert-tags-header))
 
 (use-package git-timemachine
   :ensure t)
@@ -58,5 +59,34 @@
 (defun sjj-hub-show-issues ()
   (interactive)
   (sjj-hub-command-in-project-dir "issue"))
+
+(defun sjj-bitbucket-push-and-create-pr ()
+  "Push current branch using magit and open Bitbucket PR creation page."
+  (interactive)
+  (let ((branch (magit-get-current-branch)))
+    (unless branch
+      (user-error "No current branch"))
+    ;; Perform the magit push to upstream
+    (magit-push-current-to-upstream nil)
+    ;; Add a hook to extract and open the URL after the push completes
+    (add-hook 'magit-process-finish-hook
+              #'sjj-bitbucket-extract-pr-url
+              nil t)))
+
+(defun sjj-bitbucket-extract-pr-url (process event)
+  "Extract Bitbucket PR URL from magit process buffer and open it."
+  (when (and (eq (process-status process) 'exit)
+             (= (process-exit-status process) 0))
+    (with-current-buffer (process-buffer process)
+      (save-excursion
+        (goto-char (point-min))
+        (when (re-search-forward "https://bitbucket\\.org/[^[:space:]\n]+" nil t)
+          (let ((url (match-string 0)))
+            (browse-url url)
+            (message "Opened PR creation page: %s" url)))))
+    ;; Refresh the magit status buffer
+    (magit-refresh)
+    ;; Remove the hook after it runs once
+    (remove-hook 'magit-process-finish-hook #'sjj-bitbucket-extract-pr-url t)))
 
 (provide 'git)
