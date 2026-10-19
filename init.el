@@ -16,8 +16,10 @@
   (require 'macos))
 (require 'git)
 (require 'git-link)
+(require 'bb)
 (require 'projectile-setup)
 (require 'helm-setup)
+(require 'python-setup)
 (require 'ibuffer-setup)
 (require 'general-editor-setup)
 (require 'programming-setup)
@@ -59,3 +61,34 @@
 (use-package envrc
   :ensure
   :config (envrc-global-mode))
+(put 'dired-find-alternate-file 'disabled nil)
+(put 'downcase-region 'disabled nil)
+
+(defun generate-eks-manifest ()
+  (interactive)
+  (let* ((file-path (buffer-file-name))
+	 (eks-match (string-match "/eks-service-manifests/" file-path))
+	 (eks-manifests-dir (when eks-match
+                              (substring file-path 0 (match-end 0))))
+	 (after-eks (when eks-match
+                      (substring file-path (match-end 0))))
+	 (sourcedir (when eks-manifests-dir
+                      (file-name-directory (directory-file-name eks-manifests-dir))))
+	 (manifestpath (when after-eks
+			 (file-name-directory after-eks)))
+	 (service (file-name-base file-path))
+	 (default-directory eks-manifests-dir))
+    (when (and eks-manifests-dir manifestpath service)
+      (shell-command (format "thredd-eks-generator generate -i %s%s.yaml -o %s%s"
+                             manifestpath service manifestpath service)))))
+
+(bind-key "C-x t e" 'generate-eks-manifest)
+
+(use-package vterm
+  :load-path  "/Users/simon/src/oss/emacs-libvterm")
+
+(use-package claude-code-ide
+  :vc (:url "https://github.com/manzaltu/claude-code-ide.el" :rev :newest)
+  :bind ("C-c C-'" . claude-code-ide-menu) ; Set your favorite keybinding
+  :config
+  (claude-code-ide-emacs-tools-setup)) ; Optionally enable Emacs MCP tools
