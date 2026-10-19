@@ -81,6 +81,30 @@
 
 (bind-key "C-c f" 'name-of-the-file)
 
+(defun sjj-copy-pwd-to-clipboard ()
+  (interactive)
+  (let ((pwd default-directory))
+    (kill-new pwd)
+    (message "Copied: %s" pwd)))
+
+(bind-key "C-c p" 'sjj-copy-pwd-to-clipboard)
+
+(defun sjj-copy-buffer-path-to-clipboard ()
+  (interactive)
+  (let ((path (buffer-file-name)))
+    (unless path
+      (user-error "Buffer is not visiting a file"))
+    (kill-new path)
+    (message "Copied: %s" path)))
+
+(bind-key "C-c P" 'sjj-copy-buffer-path-to-clipboard)
+
+(defun sjj-iterm-here ()
+  (interactive)
+  (call-process "open" nil nil nil "-a" "iTerm" default-directory))
+
+(bind-key "C-c i" 'sjj-iterm-here)
+
 ;; stuff to put into spaceline
 (use-package winum :ensure t)
 (use-package eyebrowse :ensure t
@@ -108,24 +132,27 @@
 
 (defun diminish-all-the-things ()
   (interactive)
-  (mapcar 'diminish (list 'editorconfig-mode
-			  'which-key-mode
-			  'projectile-mode
-			  'smartparens-mode
-			  'helm-mode
-			  'eldoc-mode
-			  'anzu-mode
-			  'yas-global-mode
-			  'highlight-indentation-mode
-			  'company-mode
-			  'flyspell-mode
-			  'yas-minor-mode
-			  'omnisharp-mode)))
+  (mapc 'diminish '(editorconfig-mode
+		    which-key-mode
+		    projectile-mode
+		    smartparens-mode
+		    helm-mode
+		    eldoc-mode
+		    anzu-mode
+		    yas-global-mode
+		    highlight-indentation-mode
+		    company-mode
+		    flyspell-mode
+		    yas-minor-mode
+		    omnisharp-mode)))
 
 (when (or (eq system-type 'darwin) (eq system-type 'gnu/linux))
   (set-face-attribute 'default nil
                     :family "MesloLGS NF" :height 140 :weight 'normal))
 
-(hl-line-mode)
+(use-package obsidian
+  :ensure t)
+
+(global-hl-line-mode)
 
 (provide 'ui)

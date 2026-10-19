@@ -26,6 +26,4 @@
   (interactive)
   (find-file sjj-ideas-org-file))
 
-(bind-key "C-c i" 'sjj-open-ideas)
-
 (provide 'org-setup)
