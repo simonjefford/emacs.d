@@ -4,9 +4,9 @@
 (defvar modes-dir (expand-file-name "modes" emacsd))
 (defvar vendor-dir (expand-file-name "vendor" emacsd))
 
-;; Native-compile warnings from third-party packages are noise. Drop them
-;; entirely: (quote silent) still logs them to *Warnings*.
-(setq native-comp-async-report-warnings-errors nil)
+;; Log every warning to *Warnings*, but only pop that window up for emergencies.
+;; Check it with (switch-to-buffer "*Warnings*") when needed.
+(setq warning-minimum-level :emergency)
 
 (add-to-list 'load-path main-config-dir)
 (add-to-list 'load-path modes-dir)
