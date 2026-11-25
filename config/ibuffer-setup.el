@@ -60,6 +60,9 @@
          (ibuffer-auto-mode 1)))
 
 (setq ibuffer-show-empty-filter-groups nil)
-(add-to-list 'ibuffer-never-show-predicates "^\\*")
+;; ibuffer-never-show-predicates is defined in ibuf-ext, which isn't loaded
+;; during init.
+(with-eval-after-load 'ibuf-ext
+  (add-to-list 'ibuffer-never-show-predicates "^\\*"))
 
 (provide 'ibuffer-setup)

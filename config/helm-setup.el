@@ -1,7 +1,10 @@
 ;;; helm-setup.el  -*- lexical-binding: t; -*-
 (use-package helm
   :ensure t
-  :demand t
+  ;; Load a second after startup (or immediately on any key below) rather
+  ;; than during init; helm-files pulls in tramp.
+  :defer 1
+  :diminish helm-mode
   :bind (("M-x" . 'helm-M-x)
 	 ("C-x C-m" . 'helm-M-x)
 	 ("M-y" . 'helm-show-kill-ring)
@@ -27,12 +30,19 @@
 
 (use-package helm-projectile
   :ensure t
+  :after (helm projectile)
   :config (progn
 	    (helm-projectile-on)))
 
-(require 'helm-ag)
+;; vendored without an autoloads file
+(use-package helm-ag
+  :commands (helm-ag helm-do-ag helm-ag-this-file helm-do-ag-this-file
+             helm-ag-project-root helm-do-ag-project-root
+             helm-ag-buffers helm-do-ag-buffers
+             helm-ag-pop-stack helm-ag-clear-stack))
 
 (use-package helm-descbinds
-  :ensure t)
+  :ensure t
+  :defer t)
 
 (provide 'helm-setup)

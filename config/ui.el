@@ -172,9 +172,30 @@
 ;; lexical-binding cookie, which Emacs 31 warns about. We don't use its history.
 (setq elgrep-data-file nil)
 
+;; Instead of global-obsidian-mode (which loads obsidian, markdown-mode and
+;; elgrep at every startup), turn obsidian-mode on only for markdown files in
+;; the vault. gfm-mode derives from markdown-mode, so this covers .md files.
+(defun sjj-obsidian-directory ()
+  "The vault directory, even before obsidian is loaded.
+Customize only sets the variable once its package loads; until then the
+value sits in the symbol's `saved-value'."
+  (or (bound-and-true-p obsidian-directory)
+      (let ((saved (get 'obsidian-directory 'saved-value)))
+        (and saved (eval (car saved) t)))))
+
+(defun sjj-obsidian-maybe-enable ()
+  (when-let* ((vault (sjj-obsidian-directory))
+              ((stringp vault))
+              (file buffer-file-name)
+              ((string-prefix-p (expand-file-name vault)
+                                (expand-file-name file))))
+    (require 'obsidian)
+    (obsidian-enable-minor-mode)))
+
 (use-package obsidian
   :ensure t
-  :defer t)
+  :defer t
+  :init (add-hook 'markdown-mode-hook #'sjj-obsidian-maybe-enable))
 
 (global-hl-line-mode)
 
