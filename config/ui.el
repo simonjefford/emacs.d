@@ -36,10 +36,17 @@
 
 (use-package twilight-anti-bright-theme :ensure t)
 
+(use-package batppuccin :ensure t)
+
 (use-package subatomic-theme :ensure t)
 
 (use-package subatomic256-theme :ensure t)
 
+(defun sjj-batppuccin ()
+  (interactive)
+  (reset-themes)
+  (load-theme 'batppuccin-mocha)
+  (spaceline-compile))
 
 (defun reset-themes ()
   (dolist (i custom-enabled-themes)
@@ -48,13 +55,13 @@
 (defun sjj-go-dark ()
   (interactive)
   (reset-themes)
-  (load-theme 'spacemacs-dark)
+  (load-theme 'batppuccin-mocha)
   (spaceline-compile))
 
 (defun sjj-go-light ()
   (interactive)
   (reset-themes)
-  (load-theme 'spacemacs-light)
+  (load-theme 'batppuccin-latte)
   (spaceline-compile))
 
 (defun sjj-twilight ()
@@ -62,6 +69,15 @@
   (reset-themes)
   (load-theme 'twilight-anti-bright)
   (spaceline-compile))
+
+(defun my-apply-theme (appearance)
+  "Load theme based on APPEARANCE (light or dark)."
+  (mapc #'disable-theme custom-enabled-themes)
+  (pcase appearance
+    ('light (load-theme 'batppuccin-latte t))
+    ('dark (load-theme 'batppuccin-mocha t))))
+
+(add-hook 'ns-system-appearance-change-functions #'my-apply-theme)
 
 (defun sjj-subatomic ()
   (interactive)
@@ -101,7 +117,7 @@
 
 (defun sjj-iterm-here ()
   (interactive)
-  (call-process "open" nil nil nil "-a" "iTerm" default-directory))
+  (call-process "open" nil nil nil "-a" "Ghostty" default-directory))
 
 (bind-key "C-c i" 'sjj-iterm-here)
 
