@@ -127,11 +127,13 @@
   :init (setq anzu-cons-mode-line-p nil)
   :config (global-anzu-mode +1))
 
-;; Icons come from a Nerd Font; MesloLGS NF (the default face) has them.
+;; Icons are drawn with "Symbols Nerd Font Mono" (nerd-icons' default font,
+;; installed by M-x nerd-icons-install-fonts as ~/Library/Fonts/NFM.ttf).
+;; Don't point this at MesloLGS NF: it gives each icon only one character
+;; cell, so the icon spills over the next character.
 (use-package nerd-icons
   :ensure t
-  :defer t
-  :custom (nerd-icons-font-family "MesloLGS NF"))
+  :defer t)
 
 (use-package doom-modeline
   :ensure t
