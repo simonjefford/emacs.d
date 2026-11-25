@@ -147,7 +147,7 @@ The body of the advice is in BODY."
 
 (bind-key "C-c t" 'crux-visit-term-buffer)
 
-(use-package "eterm-256color"
+(use-package eterm-256color
   :ensure t
   :init (add-hook 'term-mode-hook #'eterm-256color-mode))
 
@@ -157,17 +157,17 @@ The body of the advice is in BODY."
 		  (get-char-property (point) 'face))))
     (if face (message "Face: %s" face) (message "No face at %d" pos))))
 
-(use-package "atomic-chrome"
+(use-package atomic-chrome
   :ensure t
   :config (atomic-chrome-start-server))
 
-(use-package "neotree"
+(use-package neotree
   :ensure t)
 
-(use-package "savekill"
+(use-package savekill
   :ensure t)
 
-(use-package "htmlize"
+(use-package htmlize
   :ensure t)
 
 (use-package literate-calc-mode
