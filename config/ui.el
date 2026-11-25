@@ -116,11 +116,11 @@
 
 (bind-key "C-c P" 'sjj-copy-buffer-path-to-clipboard)
 
-(defun sjj-iterm-here ()
+(defun sjj-ghostty-here ()
   (interactive)
   (call-process "open" nil nil nil "-a" "Ghostty" default-directory))
 
-(bind-key "C-c i" 'sjj-iterm-here)
+(bind-key "C-c i" 'sjj-ghostty-here)
 
 ;; stuff to put into spaceline
 (use-package winum :ensure t)
