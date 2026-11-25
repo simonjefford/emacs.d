@@ -1,4 +1,28 @@
 ;;; programming-setup.el  -*- lexical-binding: t; -*-
+(defun sjj-lsp-dedupe-diagnostics (params _workspace)
+  "Merge diagnostics in PARAMS that share a range, code and message.
+gopls can publish the same compiler error twice, once with the
+\"unnecessary\" tag and once without, so flycheck lists it twice. Keep the
+tagged copy: it carries the faded face and gopls's quick fix."
+  (let ((seen (make-hash-table :test 'equal))
+        (order nil))
+    (seq-doseq (diag (lsp-get params :diagnostics))
+      (let* ((range (lsp-get diag :range))
+             (start (lsp-get range :start))
+             (end (lsp-get range :end))
+             (key (list (lsp-get start :line) (lsp-get start :character)
+                        (lsp-get end :line) (lsp-get end :character)
+                        (lsp-get diag :code) (lsp-get diag :message)))
+             (prev (gethash key seen)))
+        (cond ((not prev)
+               (puthash key diag seen)
+               (push key order))
+              ((and (lsp-get diag :tags) (not (lsp-get prev :tags)))
+               (puthash key diag seen)))))
+    (lsp-put params :diagnostics
+             (vconcat (mapcar (lambda (key) (gethash key seen)) (nreverse order))))
+    params))
+
 (use-package lsp-mode
   :init
   (progn
@@ -7,7 +31,8 @@
     (setq lsp-signature-render-documentation nil)
     (setq lsp-signature-doc-lines 0)
     (setq lsp-signature-auto-activate nil)
-    (setq lsp-auto-guess-root 't))
+    (setq lsp-auto-guess-root 't)
+    (setq lsp-diagnostic-filter #'sjj-lsp-dedupe-diagnostics))
   :commands (lsp lsp-deferred)
   :ensure t)
 
