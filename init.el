@@ -110,17 +110,27 @@
   ;; screen no longer fits the window.
   (claude-code-ide-prevent-reflow-glitch nil)
   :config
-  ;; Lines with fallback-font glyphs (e.g. the STIX "⏵⏵" in the footer) are
-  ;; taller than a normal line.  With the terminal exactly as tall as the
-  ;; window, a few of those overflow it and Emacs scrolls a line to keep the
-  ;; cursor visible, then scrolls back: the bottom of the UI bounces.  Make
-  ;; the terminal one row shorter than the window to leave slack.
+  ;; Lines with fallback-font glyphs are taller than a normal line.  With
+  ;; the terminal exactly as tall as the window, a few of those overflow it
+  ;; and Emacs scrolls to keep the cursor visible.  Make the terminal one row
+  ;; shorter than the window to leave slack.
   (defun sjj-claude-vterm-window-size (process windows)
     (when-let* ((size (window-adjust-process-window-size-smallest process windows)))
       (cons (car size) (max 1 (1- (cdr size))))))
-  (defun sjj-claude-vterm-leave-spare-row ()
+  ;; Claude Code's "⏺" tool-call dot and "⏵⏵" mode footer aren't in Meslo,
+  ;; and the only installed fallback (STIX Two Math) adds 3px to the line.
+  ;; The dot blinks while a tool runs, so everything below it bobbed by 3px.
+  ;; Show Meslo lookalikes instead so every line is the same height.
+  (defun sjj-claude-display-table ()
+    (let ((dt (make-display-table)))
+      (pcase-dolist (`(,from . ,to) '((?⏺ . ?●) (?⏵ . ?▶) (?⏹ . ?■)
+                                      (?⏩ . ?▶) (?⏪ . ?◀)))
+        (aset dt from (vector to)))
+      dt))
+  (defun sjj-claude-vterm-setup ()
     (setq-local window-adjust-process-window-size-function
-                #'sjj-claude-vterm-window-size))
+                #'sjj-claude-vterm-window-size)
+    (setq-local buffer-display-table (sjj-claude-display-table)))
   (advice-add 'claude-code-ide--configure-vterm-buffer
-              :after #'sjj-claude-vterm-leave-spare-row)
+              :after #'sjj-claude-vterm-setup)
   (claude-code-ide-emacs-tools-setup)) ; Optionally enable Emacs MCP tools
