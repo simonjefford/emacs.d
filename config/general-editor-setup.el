@@ -152,6 +152,7 @@ The body of the advice is in BODY."
 
 (use-package eterm-256color
   :ensure t
+  :defer t
   :init (add-hook 'term-mode-hook #'eterm-256color-mode))
 
 (defun what-face (pos)

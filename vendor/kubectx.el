@@ -28,10 +28,12 @@
       (setq global-mode-string
             (delq 'kubectx-string global-mode-string))
     (add-to-list 'global-mode-string 'kubectx-string t)
-    (when (> kubectx-update-interval 0)
-      (setq kubectx-timer
-            (run-at-time nil kubectx-update-interval
-                         'kubectx-update)))
-    (kubectx-update)))
+    ;; Don't call kubectl synchronously here: when enabled from init that
+    ;; blocks startup. The timer's first run is immediate once Emacs is idle.
+    (if (> kubectx-update-interval 0)
+        (setq kubectx-timer
+              (run-at-time nil kubectx-update-interval
+                           'kubectx-update))
+      (run-at-time 0 nil 'kubectx-update))))
 
 (provide 'kubectx)

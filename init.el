@@ -20,7 +20,9 @@
 (when (eq system-type 'darwin)
   (require 'macos))
 (require 'git)
-(require 'git-link)
+;; vendored without an autoloads file; loading it eagerly pulls in dired
+(use-package git-link
+  :commands (git-link git-link-commit git-link-homepage))
 (require 'bb)
 (require 'projectile-setup)
 (require 'helm-setup)
