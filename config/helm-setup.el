@@ -21,7 +21,9 @@
 		helm-ff-search-library-in-sexp        t
 		history-delete-duplicates             t
 		history-length                        200
-		helm-ff-file-name-history-use-recentf t))
+		helm-ff-file-name-history-use-recentf t
+		;; one line per candidate; long paths are cut off, not wrapped
+		helm-truncate-lines                   t))
   :config (helm-mode 1)
   :bind (:map helm-command-map
 	      ("o" . 'helm-occur)))
@@ -53,7 +55,9 @@
 (defvar sjj-helm-face-specs
   '((helm-source-header        :inherit header-line :weight bold :extend t)
     (helm-selection            :inherit region :extend t)
-    (helm-match                :inherit match)
+    ;; coloured bold text, not a background block: fuzzy matching
+    ;; highlights scattered single letters
+    (helm-match                :inherit (bold font-lock-constant-face))
     (helm-candidate-number     :inherit (bold mode-line-emphasis))
     (helm-visible-mark         :inherit secondary-selection :extend t)
     (helm-separator            :inherit shadow)
@@ -91,7 +95,7 @@
     ;; grep / occur / locate / elisp
     (helm-grep-file            :inherit compilation-info :extend t)
     (helm-grep-lineno          :inherit compilation-line-number :extend t)
-    (helm-grep-match           :inherit match :extend t)
+    (helm-grep-match           :inherit (bold font-lock-constant-face))
     (helm-grep-finish          :inherit success :extend t)
     (helm-moccur-buffer        :inherit compilation-info :extend t)
     (helm-etags-file           :inherit compilation-info :extend t)
