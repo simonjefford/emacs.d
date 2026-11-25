@@ -46,8 +46,7 @@
 (defun sjj-batppuccin ()
   (interactive)
   (reset-themes)
-  (load-theme 'batppuccin-mocha)
-  (spaceline-compile))
+  (load-theme 'batppuccin-mocha))
 
 (defun reset-themes ()
   (dolist (i custom-enabled-themes)
@@ -56,20 +55,17 @@
 (defun sjj-go-dark ()
   (interactive)
   (reset-themes)
-  (load-theme 'batppuccin-mocha)
-  (spaceline-compile))
+  (load-theme 'batppuccin-mocha))
 
 (defun sjj-go-light ()
   (interactive)
   (reset-themes)
-  (load-theme 'batppuccin-latte)
-  (spaceline-compile))
+  (load-theme 'batppuccin-latte))
 
 (defun sjj-twilight ()
   (interactive)
   (reset-themes)
-  (load-theme 'twilight-anti-bright)
-  (spaceline-compile))
+  (load-theme 'twilight-anti-bright))
 
 (defun my-apply-theme (appearance)
   "Load theme based on APPEARANCE (light or dark)."
@@ -83,8 +79,7 @@
 (defun sjj-subatomic ()
   (interactive)
   (reset-themes)
-  (load-theme 'subatomic)
-  (spaceline-compile))
+  (load-theme 'subatomic))
 
 (bind-key "C-x t d" 'sjj-subatomic)
 (bind-key "C-x t l" 'sjj-go-light)
@@ -122,7 +117,7 @@
 
 (bind-key "C-c i" 'sjj-ghostty-here)
 
-;; stuff to put into spaceline
+;; mode-line extras
 (use-package winum :ensure t :defer t)
 (use-package eyebrowse :ensure t
   :config (eyebrowse-mode t))
@@ -132,14 +127,20 @@
   :init (setq anzu-cons-mode-line-p nil)
   :config (global-anzu-mode +1))
 
-(use-package spaceline
+;; Icons come from a Nerd Font; MesloLGS NF (the default face) has them.
+(use-package nerd-icons
   :ensure t
-  :init (progn
-	  (setq powerline-default-separator 'wave))
-  :config (progn
-	    (require 'spaceline-config)
-	    (spaceline-emacs-theme)
-	    (spaceline-helm-mode)))
+  :defer t
+  :custom (nerd-icons-font-family "MesloLGS NF"))
+
+(use-package doom-modeline
+  :ensure t
+  :custom
+  ;; thredd.singleplatform.iac/e/p/e/webhook.yaml
+  (doom-modeline-buffer-file-name-style 'truncate-with-project)
+  ;; only show line endings / encoding when they aren't LF / UTF-8
+  (doom-modeline-buffer-encoding 'nondefault)
+  :hook (after-init . doom-modeline-mode))
 
 (when (fboundp 'set-fontset-font)
   (set-fontset-font t 'unicode "Symbola" nil 'prepend))

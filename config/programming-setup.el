@@ -131,9 +131,6 @@
 
 (setq projectile-project-compilation-cmd "")
 
-(require 'kubectx)
-(kubectx-mode 1)
-
 (use-package coffee-mode :ensure t :defer t)
 
 (defun sjj-visit-powershell-buffer ()
