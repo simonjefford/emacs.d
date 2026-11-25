@@ -1,3 +1,4 @@
+;;; helm-setup.el  -*- lexical-binding: t; -*-
 (use-package helm
   :ensure t
   :bind (("M-x" . 'helm-M-x)

@@ -1,3 +1,4 @@
+;;; package-setup.el  -*- lexical-binding: t; -*-
 (require 'package)
 (add-to-list 'package-archives (cons "melpa" "https://melpa.org/packages/"))
 (package-initialize)

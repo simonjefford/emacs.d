@@ -1,3 +1,4 @@
+;;; go-setup.el  -*- lexical-binding: t; -*-
 (defun subword-alert()
   (message "subword mode loaded"))
 

@@ -1,4 +1,4 @@
-;;; structurizr-mode.el --- Major mode for editing Structurizr dsl files
+;;; structurizr-mode.el --- Major mode for editing Structurizr dsl files  -*- lexical-binding: t; -*-
 
 ;; Author: Giles Paterson <giles@vurt.uk>
 ;; Created: 15 June 2022

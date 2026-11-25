@@ -1,3 +1,4 @@
+;;; java.el  -*- lexical-binding: t; -*-
 (use-package lsp-java :ensure t)
 (add-hook 'java-mode-hook #'lsp)
 

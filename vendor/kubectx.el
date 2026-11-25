@@ -1,3 +1,4 @@
+;;; kubectx.el  -*- lexical-binding: t; -*-
 (defvar kubectx-kubectl-command "kubectl")
 (defvar kubectx-timer nil)
 (defvar kubectx-string "")

@@ -1,3 +1,4 @@
+;;; terraform-setup.el  -*- lexical-binding: t; -*-
 (defun sjj-terraform-hook()
   (progn
     (terraform-format-on-save-mode)

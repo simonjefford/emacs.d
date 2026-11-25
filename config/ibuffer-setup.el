@@ -1,3 +1,4 @@
+;;; ibuffer-setup.el  -*- lexical-binding: t; -*-
 (use-package ibuffer-projectile
   :ensure t)
 

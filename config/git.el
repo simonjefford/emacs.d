@@ -1,3 +1,4 @@
+;;; git.el  -*- lexical-binding: t; -*-
 (unbind-key "s-m")
 
 (defun magit-quit-session()

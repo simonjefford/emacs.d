@@ -1,3 +1,4 @@
+;;; macos.el  -*- lexical-binding: t; -*-
 (use-package exec-path-from-shell
   :ensure t
   :init (setq exec-path-from-shell-variables '("PATH" "MANPATH" "EDITOR" "GOPATH" "JSONNET_PATH"))

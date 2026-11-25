@@ -1,3 +1,4 @@
+;;; projectile-setup.el  -*- lexical-binding: t; -*-
 (use-package projectile
   :ensure t
   :bind (("M-t" . 'projectile-find-file))

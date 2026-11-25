@@ -1,3 +1,4 @@
+;;; ruby-setup.el  -*- lexical-binding: t; -*-
 (use-package inf-ruby
   :ensure t)
 

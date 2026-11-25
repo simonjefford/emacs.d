@@ -1,3 +1,4 @@
+;;; ivy-setup.el  -*- lexical-binding: t; -*-
 (use-package counsel
   :ensure t)
 

@@ -1,3 +1,4 @@
+;;; markdown-setup.el  -*- lexical-binding: t; -*-
 (defun sjj-markdown-hook()
   (progn
     (setq-local flycheck-checkers '())

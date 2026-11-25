@@ -1,3 +1,4 @@
+;;; emacs-lisp-setup.el  -*- lexical-binding: t; -*-
 (defun emacs-lisp-defaults()
   (progn
     (smartparens-strict-mode +1)

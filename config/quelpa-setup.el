@@ -1,3 +1,4 @@
+;;; quelpa-setup.el  -*- lexical-binding: t; -*-
 (use-package quelpa :ensure t)
 (quelpa
  '(quelpa-use-package

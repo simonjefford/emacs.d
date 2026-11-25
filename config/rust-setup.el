@@ -1,3 +1,4 @@
+;;; rust-setup.el  -*- lexical-binding: t; -*-
 (use-package rust-mode
   :hook (rust-mode-hook . lsp-deferred)
   :ensure t)

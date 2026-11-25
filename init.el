@@ -1,3 +1,4 @@
+;;; init.el  -*- lexical-binding: t; -*-
 (defvar emacsd (file-name-directory load-file-name))
 (defvar main-config-dir (expand-file-name "config" emacsd))
 (defvar modes-dir (expand-file-name "modes" emacsd))

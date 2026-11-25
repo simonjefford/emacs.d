@@ -1,3 +1,4 @@
+;;; python-setup.el  -*- lexical-binding: t; -*-
 ;; (use-package elpy
 ;;   :ensure
 ;;   :defer t
