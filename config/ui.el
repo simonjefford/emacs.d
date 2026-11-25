@@ -167,6 +167,10 @@
   (set-face-attribute 'default nil
                     :family "MesloLGS NF" :height 140 :weight 'normal))
 
+;; elgrep (pulled in by obsidian) rewrites elgrep-data.el on exit without a
+;; lexical-binding cookie, which Emacs 31 warns about. We don't use its history.
+(setq elgrep-data-file nil)
+
 (use-package obsidian
   :ensure t)
 
