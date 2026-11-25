@@ -26,3 +26,5 @@ session*
 /elgrep-data.el
 /scratch
 /tree-sitter/
+/package-quickstart.el
+/package-quickstart.elc
