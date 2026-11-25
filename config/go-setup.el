@@ -21,11 +21,13 @@
   :ensure t)
 
 (use-package go-guru
-  :ensure t)
+  :ensure t
+  :defer t)
 
 (use-package go-projectile
-  :ensure t)
+  :ensure t
+  :after (projectile go-mode))
 
-(use-package gotest :ensure t)
+(use-package gotest :ensure t :defer t)
 
 (provide 'go-setup)

@@ -14,7 +14,9 @@
 (global-auto-revert-mode t)
 
 (use-package crux
-  :ensure t)
+  :ensure t
+  ;; not autoloaded, but sjj-visit-powershell-buffer calls it
+  :commands crux-start-or-switch-to)
 
 (use-package editorconfig
   :ensure t
@@ -160,18 +162,22 @@ The body of the advice is in BODY."
 
 (use-package atomic-chrome
   :ensure t
+  :defer 1
   :config (atomic-chrome-start-server))
 
 (use-package neotree
-  :ensure t)
+  :ensure t
+  :defer t)
 
 (use-package savekill
   :ensure t)
 
 (use-package htmlize
-  :ensure t)
+  :ensure t
+  :defer t)
 
 (use-package literate-calc-mode
-  :ensure t)
+  :ensure t
+  :defer t)
 
 (provide 'general-editor-setup)

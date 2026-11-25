@@ -35,13 +35,13 @@
   :defer t
   :init (load-theme 'spacemacs-light t))
 
-(use-package twilight-anti-bright-theme :ensure t)
+(use-package twilight-anti-bright-theme :ensure t :defer t)
 
-(use-package batppuccin :ensure t)
+(use-package batppuccin :ensure t :defer t)
 
-(use-package subatomic-theme :ensure t)
+(use-package subatomic-theme :ensure t :defer t)
 
-(use-package subatomic256-theme :ensure t)
+(use-package subatomic256-theme :ensure t :defer t)
 
 (defun sjj-batppuccin ()
   (interactive)
@@ -123,10 +123,10 @@
 (bind-key "C-c i" 'sjj-ghostty-here)
 
 ;; stuff to put into spaceline
-(use-package winum :ensure t)
+(use-package winum :ensure t :defer t)
 (use-package eyebrowse :ensure t
   :config (eyebrowse-mode t))
-(use-package persp-mode :ensure t)
+(use-package persp-mode :ensure t :defer t)
 (use-package anzu
   :ensure t
   :init (setq anzu-cons-mode-line-p nil)
@@ -145,7 +145,8 @@
   (set-fontset-font t 'unicode "Symbola" nil 'prepend))
 
 (use-package diminish
-  :ensure t)
+  :ensure t
+  :defer t)
 
 (defun diminish-all-the-things ()
   (interactive)
@@ -172,7 +173,8 @@
 (setq elgrep-data-file nil)
 
 (use-package obsidian
-  :ensure t)
+  :ensure t
+  :defer t)
 
 (global-hl-line-mode)
 

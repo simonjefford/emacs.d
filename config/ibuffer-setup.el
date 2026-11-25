@@ -1,6 +1,7 @@
 ;;; ibuffer-setup.el  -*- lexical-binding: t; -*-
 (use-package ibuffer-projectile
-  :ensure t)
+  :ensure t
+  :defer t)
 
 (bind-key "C-x C-b" 'ibuffer)
 

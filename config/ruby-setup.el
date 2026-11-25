@@ -1,8 +1,9 @@
 ;;; ruby-setup.el  -*- lexical-binding: t; -*-
 (use-package inf-ruby
-  :ensure t)
+  :ensure t
+  :defer t)
 
-(use-package rspec-mode :ensure t)
+(use-package rspec-mode :ensure t :defer t)
 
 (use-package rbenv
   :ensure t

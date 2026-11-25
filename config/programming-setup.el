@@ -19,7 +19,8 @@
   :commands lsp-ui-mode)
 
 (use-package typescript-mode
-  :ensure t)
+  :ensure t
+  :defer t)
 
 ;; (use-package company-lsp
 ;;   :ensure t
@@ -27,6 +28,7 @@
 
 (use-package flycheck
   :ensure t
+  :defer 1
   :config
   (progn
     (setq flycheck-checkers '(css-csslint
@@ -77,35 +79,41 @@
 ;; "incidental" language setup
 (use-package groovy-mode
   :init (add-to-list 'auto-mode-alist '("Jenkinsfile\\'" . groovy-mode))
-  :ensure t)
+  :ensure t
+  :defer t)
 
 (use-package yaml-mode
-  :ensure t)
+  :ensure t
+  :defer t)
 
 (use-package protobuf-mode
-  :ensure t)
+  :ensure t
+  :defer t)
 
 (use-package dockerfile-mode
-  :ensure t)
+  :ensure t
+  :defer t)
 
 (use-package yasnippet
   :ensure t
+  :defer 1
   :config (yas-global-mode))
 
 (use-package gist
-  :ensure t)
+  :ensure t
+  :defer t)
 
-(use-package powershell :ensure t)
+(use-package powershell :ensure t :defer t)
 
 ;; evilnc-default-hotkeys stopped working and M-; is the only shortcut
 ;; I ever use anyway
 (use-package evil-nerd-commenter
   :ensure t
-  :config (global-set-key (kbd "M-;") 'evilnc-comment-or-uncomment-lines))
+  :bind ("M-;" . evilnc-comment-or-uncomment-lines))
 
-(use-package web-mode :ensure t)
+(use-package web-mode :ensure t :defer t)
 
-(use-package jsonnet-mode :ensure t)
+(use-package jsonnet-mode :ensure t :defer t)
 
 (setq compilation-ask-about-save nil)
 
@@ -126,7 +134,7 @@
 (require 'kubectx)
 (kubectx-mode 1)
 
-(use-package coffee-mode :ensure t)
+(use-package coffee-mode :ensure t :defer t)
 
 (defun sjj-visit-powershell-buffer ()
   (interactive)
@@ -150,9 +158,11 @@
 (setq git-link-open-in-browser 't)
 
 (use-package dash-docs
-  :ensure t)
+  :ensure t
+  :defer t)
 
 (use-package bazel
-  :ensure t)
+  :ensure t
+  :defer t)
 
 (provide 'programming-setup)

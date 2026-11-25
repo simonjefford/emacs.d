@@ -16,10 +16,12 @@
   (remove-hook 'magit-status-headers-hook 'magit-insert-tags-header))
 
 (use-package git-timemachine
-  :ensure t)
+  :ensure t
+  :defer t)
 
 (use-package diff-hl
   :ensure t
+  :defer 1
   :config
   (progn
     (global-diff-hl-mode +1)
@@ -27,7 +29,8 @@
     (add-hook 'dired-mode-hook 'diff-hl-dired-mode)))
 
 (use-package github-browse-file
-  :ensure t)
+  :ensure t
+  :defer t)
 
 (defadvice magit-status (around magit-fullscreen activate)
   (window-configuration-to-register :magit-fullscreen)

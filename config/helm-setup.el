@@ -1,6 +1,7 @@
 ;;; helm-setup.el  -*- lexical-binding: t; -*-
 (use-package helm
   :ensure t
+  :demand t
   :bind (("M-x" . 'helm-M-x)
 	 ("C-x C-m" . 'helm-M-x)
 	 ("M-y" . 'helm-show-kill-ring)

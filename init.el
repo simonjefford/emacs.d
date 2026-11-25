@@ -43,12 +43,14 @@
 ;; (require 'copilot-setup)
 
 (use-package discover-my-major
-  :ensure t)
+  :ensure t
+  :defer t)
 
 (server-start)
 
 (use-package xkcd
-  :ensure t)
+  :ensure t
+  :defer t)
 
 (defun recompile-init ()
   (interactive)
@@ -90,7 +92,8 @@
 (bind-key "C-x t e" 'generate-eks-manifest)
 
 (use-package vterm
-  :load-path  "/Users/simon/src/oss/emacs-libvterm")
+  :load-path  "/Users/simon/src/oss/emacs-libvterm"
+  :commands (vterm vterm-other-window))
 
 (use-package claude-code-ide
   :vc (:url "https://github.com/manzaltu/claude-code-ide.el" :rev :newest)
