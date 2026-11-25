@@ -4,6 +4,9 @@
 (defvar modes-dir (expand-file-name "modes" emacsd))
 (defvar vendor-dir (expand-file-name "vendor" emacsd))
 
+;; Native-compile warnings from third-party packages are noise; still logged in *Warnings*.
+(setq native-comp-async-report-warnings-errors (quote silent))
+
 (add-to-list 'load-path main-config-dir)
 (add-to-list 'load-path modes-dir)
 (add-to-list 'load-path vendor-dir)
